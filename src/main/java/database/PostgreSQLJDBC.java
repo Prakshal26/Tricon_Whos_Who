@@ -1,6 +1,7 @@
 package database;
 
-import parser.Person;
+import pojo.CrossRefEntry;
+import pojo.Person;
 
 import java.sql.*;
 import java.util.List;
@@ -100,6 +101,31 @@ public class PostgreSQLJDBC {
 
                 statement.execute();
             }
+            statement.close();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+    }
+    public void insertCrossRefEntry(Connection connection, CrossRefEntry crossRefEntry) {
+
+
+        try {
+            PreparedStatement statement = connection.prepareStatement("INSERT into ww_crossrefentry(xml_id, " +
+                    "xml_surname, xml_firstname, xml_nobility, xml_title, xml_pseudonym, referred_id,referred_name)" + "VALUES (?,?,?,?,?,?,?,?)");
+
+            int i =1;
+            statement.setString(i++, crossRefEntry.getXml_id());
+            statement.setString(i++, crossRefEntry.getXml_surname());
+            statement.setString(i++, crossRefEntry.getXml_firstname());
+            statement.setString(i++, crossRefEntry.getXml_nobility());
+            statement.setString(i++, crossRefEntry.getXml_title());
+            statement.setString(i++, crossRefEntry.getXml_pseudonym());
+            statement.setString(i++, crossRefEntry.getReferred_id());
+            statement.setString(i++, crossRefEntry.getReferred_name());
+
+            statement.execute();
             statement.close();
 
         } catch (Exception e) {

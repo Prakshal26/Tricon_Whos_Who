@@ -4,34 +4,14 @@ import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import parser.HashMapParser;
-import parser.Person;
+import pojo.Person;
 
 import java.util.LinkedList;
 import java.util.List;
 
 public class Name {
 
-
     public static void convert(Element element, Person person) {
-
-        List<String> listNames = convertNames(element);
-        person.setSurname(listNames.get(0));
-        person.setNobility(listNames.get(1));
-        person.setTitle(listNames.get(2));
-        person.setFirstname(listNames.get(3));
-        person.setPseudonym(listNames.get(4));
-
-    }
-
-
-    public static List<String> convertNames(Element element){
-
-        StringBuilder surNameBuilder = new StringBuilder();
-        StringBuilder firstNameBuilder = new StringBuilder();
-        StringBuilder titleBuilder = new StringBuilder();
-        StringBuilder nobilityBuilder = new StringBuilder();
-        StringBuilder pseudonymBuilder = new StringBuilder();
-
 
         NodeList nodeList = element.getChildNodes();
 
@@ -42,34 +22,36 @@ public class Name {
                 Element subElement = (Element) node;
 
                 if (subElement.getTagName()=="INDEXEDNAME") {
+                    StringBuilder surNameBuilder = new StringBuilder();
                     printNote(subElement.getChildNodes(),surNameBuilder);
+                    person.setSurname(surNameBuilder.toString());
                 }
                 if (subElement.getTagName() == "NOBILITY") {
+                    StringBuilder nobilityBuilder = new StringBuilder();
                     nobilityBuilder.append(", ");
                     printNoteNobility(subElement.getChildNodes(), nobilityBuilder);
+                    person.setNobility(nobilityBuilder.toString());
                 }
                 if (subElement.getTagName() == "TITLES") {
+                    StringBuilder titleBuilder = new StringBuilder();
                     titleBuilder.append(", ");
                     printNote(subElement.getChildNodes(), titleBuilder);
+                    person.setTitle(titleBuilder.toString());
                 }
                 if (subElement.getTagName() == "GIVENNAME") {
+                    StringBuilder firstNameBuilder = new StringBuilder();
                     printNote(subElement.getChildNodes(), firstNameBuilder);
+                    person.setFirstname(firstNameBuilder.toString());
                 }
                 if (subElement.getTagName() == "PSEUDONYM") {
+                    StringBuilder pseudonymBuilder = new StringBuilder();
                     pseudonymBuilder.append("(");
                     printNote(subElement.getChildNodes(), pseudonymBuilder);
                     pseudonymBuilder.append(")");
+                    person.setPseudonym(pseudonymBuilder.toString());
                 }
             }
         }
-
-        List <String> list = new LinkedList<>();
-        list.add(surNameBuilder.toString());
-        list.add(nobilityBuilder.toString());
-        list.add(titleBuilder.toString());
-        list.add(firstNameBuilder.toString());
-        list.add(pseudonymBuilder.toString());
-        return list;
     }
 
     private static void printNote(NodeList nodeList, StringBuilder stringBuilder) {

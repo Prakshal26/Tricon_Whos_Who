@@ -35,4 +35,6 @@ public class XPathConstants {
 
     public final static String CONTACTDETAILS = "CONTACTDETAILS";
 
+    public final static String CROSSREFENTRY = "CROSSREFENTRY";
+
 }

@@ -1,4 +1,4 @@
-package parser;
+package pojo;
 
 //import com.sun.tools.javac.util.StringUtils;
 

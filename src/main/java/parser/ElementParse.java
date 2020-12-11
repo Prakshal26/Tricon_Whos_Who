@@ -4,14 +4,17 @@ import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
+import pojo.CrossRefEntry;
+import pojo.Person;
 import xpath.classes.*;
 import xpath.constants.XPathConstants;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class ElementParse {
 
-    public static void match(Element element, Person person) {
+    public static void match(Element element, Person person, CrossRefEntry crossRefEntry) {
 
         String tagName = element.getTagName();
         switch (tagName) {
@@ -99,7 +102,6 @@ public class ElementParse {
                 person.setLeisure_interests(Films.convert(element));
                 break;
 
-
             case XPathConstants.CONTACTDETAILS:
                 List <String> stringList = ContactDetails.convert(element);
                 if (stringList.get(0).equalsIgnoreCase("PUBLIC")) {
@@ -109,13 +111,15 @@ public class ElementParse {
                     person.setManagement(stringList.get(1));
                 }
                 break;
+            case XPathConstants.CROSSREFENTRY:
+                CrossRefEntryParser.convert(element, crossRefEntry, person);
+                break;
             default:
                 break;
 
         }
     }
-
-    public static Person parseFiles(Document doc) {
+    public static List<Object> parseFiles(Document doc) {
 
         doc.getDocumentElement().normalize();
         Node entryNode =doc.getDocumentElement();
@@ -124,6 +128,7 @@ public class ElementParse {
         Element entryElement = (Element) entryNode;
 
         Person person = new Person();
+        CrossRefEntry crossRefEntry = new CrossRefEntry();
 
         if (entryElement.hasAttribute("DEAD")) {
             String deadVar = entryElement.getAttribute("DEAD");
@@ -134,15 +139,22 @@ public class ElementParse {
             person.setGender(entryElement.getAttribute("GENDER"));
         }
 
+        if (entryElement.hasAttribute("ID")) {
+            crossRefEntry.setXml_id(entryElement.getAttribute("ID"));
+        }
+
         for (int i=0; i<nodeList.getLength();i++) {
             Node nNode = nodeList.item(i);
 
             if (nNode.getNodeType() == Node.ELEMENT_NODE) {
                 Element element = (Element)nNode;
-                match(element,person);
+                match(element, person, crossRefEntry);
             }
         }
-        return person;
+        List<Object> objectList = new ArrayList<>();
+        objectList.add(person);
+        objectList.add(crossRefEntry);
+        return objectList;
 
     }
 
