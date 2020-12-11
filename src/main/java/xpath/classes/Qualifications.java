@@ -9,14 +9,11 @@ public class Qualifications {
     public static String convert(Element element){
 
         StringBuilder stringBuilder = new StringBuilder();
-        stringBuilder.append("<p>");
-
         if (element.hasChildNodes()) {
             printNote(element.getChildNodes(),stringBuilder);
         } else {
             stringBuilder.append(element.getTextContent());
         }
-        stringBuilder.append("</p>");
         return stringBuilder.toString();
     }
 
