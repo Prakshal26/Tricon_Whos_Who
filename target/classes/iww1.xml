@@ -1,0 +1,496 @@
+<?xml version="1.0"?>
+<?IS10744 arch
+        name="SLlink"
+        public-id="-//STEP//NOTATION SigmaLink link architecture//EN"
+        dtd-public-id="-//STEP//DTD SigmaLink link architecture//EN"
+        renamer-att="SLNames"
+        ??>
+<?ATTLINK entry id "SLT" ??>
+<?ATTLINK xref slid "SLA" ??>
+<?ATTLINK crossrefentry slid "SLA" ??>
+<?Pub EntList AElig Aacute Abreve Acirc Agrave Amacr Aogon Aring Atilde Auml
+        Cacute Ccaron Ccedil Ccirc Cdot Dagger Dstrok ETH Dcaron Eacute Ecaron Ecirc
+        Egrave Emacr Eogon Euml Edot Gbreve Gcedil Gcirc Gdot Hcirc Iacute Icirc
+        Idot Igrave Imacr Iogon Itilde Iuml Jcirc Lacute Lcaron Lstrok Nacute Ncaron
+        Ntilde OElig Oacute Ocirc Ograve Omacr Oslash Otilde Ouml Racute Rcaron Sacute
+        Scaron Scedil Scirc THORN Uacute Ubreve Ucirc Udblac Ugrave Umacr Uogon Uring
+        Utilde Uuml Yacute Yuml Zacute Zcaron Zdot aacute abreve acirc aelig agrave
+        amacr amp aogon aring atilde auml cacute ccaron ccedil ccirc cdot copy dagger
+        deg dcaron dstrok eacute ecaron ecirc edot egrave emacr emsp ensp eogon eth
+        euml frac12 frac13 frac14 frac34 frac23 gbreve gcirc gdot iacute icirc iexcl
+        igrave imacr inodot itilde iuml lcaron ldquo lsquo lstrok mdash minus nacute
+        nbsp ncaron ndash ntilde oacute ocirc odblac oelig ograve omacr oslash otilde
+        ouml para racute rcaron rdquo rsquo sacute scaron scedil scirc sect tcedil
+        thinsp thorn uacute ubreve ucirc?>
+<ENTRY PREVUPDATES="10/3/00;22/3/01ed1;12/03/02ed1" DEAD="0" DELETED="NO" GENDER="M" DATAPROTECT="N" REGION="Europe" SUB-REGION="Western European" NATIONALITY="British" ID="BLA-0880" SORTKEY="blakemore__colin_brian" MAIN="MAINBOTH" WOM="WOMNONE" PM="PMNONE" CM="CMNONE" AW="AWNONE" PO="PONONE" IA="IANONE" ENV="ENVNONE" EDIO="EDIONONE" SA="SANONE" CASEE="CASEENONE" WE="WENONE" SACAC="SACACNONE" USAC="USACNONE" EERCA="EERCANONE" ASS="ASSNONE" FEA="FEANONE" MENA="MENANONE">
+    <?Pub Tag atict:info tracking="off" ref="0"?>
+    <?Pub Tag atict:user
+            user="SaklaniA" fullname="Saklani, Aakanksha"?>
+    <?Pub Tag atict:user user="sens"
+            fullname="Sen, Sreerupa"?>
+    <REVISION-LIST>
+        <LAST-REVISION REVISION-DATE="02.03.2020" REVISION-TYPE="SECONDARY"/>
+        <LAST-REPLY REVISION-DATE="04.04.2013"/>
+        <REVISION REVISION-DATE="16.06.2014" REVISION-TYPE="SECONDARY"/>
+        <REVISION REVISION-DATE="04.04.2013" REVISION-TYPE="REPLY"/>
+        <REVISION REVISION-DATE="20.03.2008" REVISION-TYPE="REPLY"/>
+        <REVISION REVISION-DATE="18.02.2008" REVISION-TYPE="REPLY"/>
+        <REVISION REVISION-DATE="27.04.2005" REVISION-TYPE="REPLY"/>
+        <REVISION REVISION-DATE="12.02.2004" REVISION-TYPE="SECONDARY"/>
+        <REVISION REVISION-DATE="13.03.2003" REVISION-TYPE="REPLY"/>
+        <REVISION REVISION-DATE="12.03.2002" REVISION-TYPE="SECONDARY">sigmalink load</REVISION>
+        <REVISION REVISION-DATE="10.03.2000" REVISION-TYPE="SECONDARY"/>
+        <REVISION REVISION-DATE="22.03.2001" REVISION-TYPE="SECONDARY"/>
+    </REVISION-LIST>
+    <SOURCE>
+        <CHECKED FROM="WHOSWHO"/>
+    </SOURCE>
+    <NAME>
+        <INDEXEDNAME>BLAKEMORE</INDEXEDNAME>
+        <TITLES>Sir</TITLES>
+        <GIVENNAME>Colin (Brian)</GIVENNAME>
+        <KNIGHT>
+            <ABBR REFID="ABBR-0611">Kt</ABBR>
+        </KNIGHT>
+    </NAME>
+    <QUALIFICATIONS>
+        <ABBR REFID="ABBR-0821">PhD</ABBR>
+        ,
+        <ABBR REFID="ABBR-0912">ScD</ABBR>
+        ,
+        <ABBR REFID="ABBR-0318">DSc</ABBR>
+        ,
+        <ABBR REFID="ABBR-0476">FRS</ABBR>
+        ,
+        <ABBR REFID="ABBR-0440">FMedSci</ABBR>
+        ,
+        <ABBR REFID="ABBR-0157">CBiol</ABBR>
+    </QUALIFICATIONS>
+    <NATIONALITY HIDDEN="0">British</NATIONALITY>
+    <PROFESSION HIDDEN="0" INDEX="ACADEMIA-SCIENCE-AND-RESEARCH">neuroscientist</PROFESSION>
+    <PROFESSION HIDDEN="0">academic</PROFESSION>
+    <PRESENTPOSITION>
+        <JOB>Director, Centre for the Study of the Senses and Professor of Neuroscience and Philosophy, School of Advanced Study</JOB>
+        ,
+        <ORGANISATION>University of London</ORGANISATION>
+    </PRESENTPOSITION>
+    <DATEOFBIRTH BIRTHYEAR="1944" BIRTHMONTH="06" BIRTHDAY="01">1 June 1944</DATEOFBIRTH>
+    <PLACEOFBIRTH>Stratford-upon-Avon,
+        <ABBR REFID="ABBR-1011">Warwicks.</ABBR>
+    </PLACEOFBIRTH>
+    <PARENTAGE>
+        <ABBR REFID="ABBR-0900">s.</ABBR>
+        of Cedric Norman and Beryl Ann Blakemore
+    </PARENTAGE>
+    <IMMEDIATEFAMILY>
+        <ABBR REFID="ABBR-0647">m.</ABBR>
+        Andr&amp;eacute;e Elizabeth Washbourne 1965; three
+        <ABBR REFID="ABBR-0240">d.</ABBR>
+    </IMMEDIATEFAMILY>
+    <EDUCATION>King Henry VIII School, Coventry, Corpus Christi
+        <ABBR REFID="ABBR-0205">Coll.</ABBR>
+        , Cambridge,
+        <ABBR REFID="ABBR-0986">Univ.</ABBR>
+        of California, Berkeley,
+        <ABBR REFID="ABBR-0992">USA</ABBR>
+    </EDUCATION>
+    <CAREERPARA>Harkness Fellowship,
+        <ABBR REFID="ABBR-0986">Univ.</ABBR>
+        of California, Berkeley 1965&amp;ndash;67;
+        <ABBR REFID="ABBR-0986">Univ.</ABBR>
+        Demonstrator, Physiological
+        <ABBR REFID="ABBR-0616">Lab.</ABBR>
+        ,
+        <ABBR REFID="ABBR-0986">Univ.</ABBR>
+        of Cambridge 1968&amp;ndash;72, Lecturer in Physiology 1972&amp;ndash;79, Fellow and
+        <ABBR REFID="ABBR-0287">Dir</ABBR>
+        of Medical Studies, Downing
+        <ABBR REFID="ABBR-0205">Coll.</ABBR>
+        Cambridge 1971&amp;ndash;79; Visiting
+        <ABBR REFID="ABBR-0844">Prof.</ABBR>
+        , New York
+        <ABBR REFID="ABBR-0986">Univ.</ABBR>
+        1970,
+        <ABBR REFID="ABBR-0699">MIT</ABBR>
+        1971,
+        <ABBR REFID="ABBR-0986">Univ.</ABBR>
+        of Toronto 1984, McMaster
+        <ABBR REFID="ABBR-0986">Univ.</ABBR>
+        1992,
+        <ABBR REFID="ABBR-0986">Univ.</ABBR>
+        of California, Davis 1980, 1995&amp;ndash;97; Visiting Scientist, Salk
+        <ABBR REFID="ABBR-0571">Inst.</ABBR>
+        , San Diego 1982&amp;ndash;83, 1992; Locke Research Fellow, Royal
+        <ABBR REFID="ABBR-0932">Soc.</ABBR>
+        1976&amp;ndash;79; Waynflete
+        <ABBR REFID="ABBR-0844">Prof.</ABBR>
+        of Physiology,
+        <ABBR REFID="ABBR-0986">Univ.</ABBR>
+        of Oxford 1979&amp;ndash;2007,
+        <ABBR REFID="ABBR-0844">Prof.</ABBR>
+        of Neuroscience 2007&amp;ndash;12,
+        <ABBR REFID="ABBR-0844">Prof.</ABBR>
+        <ABBR REFID="ABBR-0352">Emer.</ABBR>
+        2012&amp;ndash;;
+        <ABBR REFID="ABBR-0844">Prof.</ABBR>
+        of Physiology,
+        <ABBR REFID="ABBR-0986">Univ.</ABBR>
+        of Warwick;
+        <ABBR REFID="ABBR-0844">Prof.</ABBR>
+        of Neuroscience and Philosophy, School of Advanced Study,
+        <ABBR REFID="ABBR-0986">Univ.</ABBR>
+        of London 2012&amp;ndash;,
+        <ABBR REFID="ABBR-0287">Dir</ABBR>
+        Centre for the Study of the Senses; Professorial Fellow, Magdalen
+        <ABBR REFID="ABBR-0205">Coll.</ABBR>
+        Oxford 1979, later
+        <ABBR REFID="ABBR-0352">Emer.</ABBR>
+        Fellow; Vice-
+        <ABBR REFID="ABBR-1115">Chair.</ABBR>
+        European Dana Alliance for the Brain 1996&amp;ndash;;
+        <ABBR REFID="ABBR-0171">CEO</ABBR>
+        <ABBR REFID="ABBR-0716">MRC</ABBR>
+        2003&amp;ndash;07; Vice-
+        <ABBR REFID="ABBR-0837">Pres.</ABBR>
+        <ABBR REFID="ABBR-0086">BAAS</ABBR>
+        1990&amp;ndash;97, 1998&amp;ndash;2001,
+        <ABBR REFID="ABBR-0837">Pres.</ABBR>
+        1997&amp;ndash;98,
+        <ABBR REFID="ABBR-1115">Chair.</ABBR>
+        2001&amp;ndash;03;
+        <ABBR REFID="ABBR-0837">Pres.</ABBR>
+        British Neuroscience
+        <ABBR REFID="ABBR-0077">Asscn</ABBR>
+        1997&amp;ndash;2000, Physiological
+        <ABBR REFID="ABBR-1173">Soc.</ABBR>
+        2001&amp;ndash;03, Biosciences
+        <ABBR REFID="ABBR-1132">Fed.</ABBR>
+        2002&amp;ndash;04;
+        <ABBR REFID="ABBR-0287">Dir</ABBR>
+        McDonnell-Pew Centre for Cognitive Neuroscience, Oxford 1990&amp;ndash;2003,
+        <ABBR REFID="ABBR-0716">MRC</ABBR>
+        Interdisciplinary Research Centre for Cognitive Neuroscience, Oxford 1996&amp;ndash;2003;
+        <ABBR REFID="ABBR-0078">Assoc.</ABBR>
+        <ABBR REFID="ABBR-0287">Dir</ABBR>
+        <ABBR REFID="ABBR-0716">MRC</ABBR>
+        Research Centre in Brain and Behaviour, Oxford 1990&amp;ndash;96;
+        <ABBR REFID="ABBR-0212">Commr</ABBR>
+        <ABBR REFID="ABBR-0969">UK</ABBR>
+        Drug Policy
+        <ABBR REFID="ABBR-0208">Comm.</ABBR>
+        2006&amp;ndash;;
+        <ABBR REFID="ABBR-0676">mem.</ABBR>
+        Advisory Council
+        <ABBR REFID="ABBR-0077">Asscn</ABBR>
+        of the British Pharmaceutical Industry 2007&amp;ndash;;
+        <ABBR REFID="ABBR-1115">Chair.</ABBR>
+        <ABBR REFID="ABBR-0505">Gen.</ABBR>
+        Advisory
+        <ABBR REFID="ABBR-0237">Cttee</ABBR>
+        on Science, Food Standards Agency 2007&amp;ndash;, A*STAR &amp;ndash; Duke-NUS
+        <ABBR REFID="ABBR-0516">Grad.</ABBR>
+        Medical School Partnership in Neuroscience, Singapore 2007&amp;ndash;;
+        <ABBR REFID="ABBR-0287">Dir</ABBR>
+        (non-
+        <ABBR REFID="ABBR-0362">exec.</ABBR>
+        ) Harkness Fellows
+        <ABBR REFID="ABBR-0077">Asscn</ABBR>
+        and Transatlantic Trust 2001&amp;ndash;, Physiological
+        <ABBR REFID="ABBR-1173">Soc.</ABBR>
+        2001&amp;ndash;, SANE 2001&amp;ndash;, Biosciences
+        <ABBR REFID="ABBR-1132">Fed.</ABBR>
+        2002&amp;ndash;, Coalition for Medical Progress, British Technology Group
+        <ABBR REFID="ABBR-0827">plc</ABBR>
+        2007&amp;ndash;;
+        <ABBR REFID="ABBR-0078">Assoc.</ABBR>
+        <ABBR REFID="ABBR-0340">Ed.</ABBR>
+        NeuroReport 1989&amp;ndash;2003;
+        <ABBR REFID="ABBR-0340">Ed.</ABBR>
+        -in-Chief IBRO News 1986&amp;ndash;2000;
+        <ABBR REFID="ABBR-0676">mem.</ABBR>
+        Editorial
+        <ABBR REFID="ABBR-0105">Bd</ABBR>
+        Perception 1971, Behavioral and Brain Sciences 1977, Journal of Developmental Physiology 1978&amp;ndash;86, Experimental Brain Research 1979&amp;ndash;89, Language and Communication 1979, Reviews in the Neurosciences 1984&amp;ndash;, News in Physiological Sciences 1985, Clinical Vision Sciences 1986, Chinese Journal of Physiological Sciences 1988, Advances in Neuroscience 1989&amp;ndash;, Vision Research 1993&amp;ndash;,
+        <ABBR REFID="ABBR-0572">Int.</ABBR>
+        Review of Neurobiology 1996&amp;ndash;, EuroBrain 1998, American Journal of Bioethics 2006&amp;ndash;; Leverhulme Fellowship 1974&amp;ndash;75; Lethaby
+        <ABBR REFID="ABBR-0844">Prof.</ABBR>
+        ,
+        <ABBR REFID="ABBR-0870">RCA</ABBR>
+        , London 1978; Storer Lecturer,
+        <ABBR REFID="ABBR-0986">Univ.</ABBR>
+        of California, Davis 1980, Regents&amp;rsquo;
+        <ABBR REFID="ABBR-0844">Prof.</ABBR>
+        1995&amp;ndash;96; Macallum Lecturer,
+        <ABBR REFID="ABBR-0986">Univ.</ABBR>
+        of Toronto 1984; Fellow, World
+        <ABBR REFID="ABBR-0335">Econ.</ABBR>
+        Forum 1994&amp;ndash;98; Founder Fellow,
+        <ABBR REFID="ABBR-0011">Acad.</ABBR>
+        of Medical Sciences 1998&amp;ndash;; Foreign
+        <ABBR REFID="ABBR-0676">mem.</ABBR>
+        Royal Netherlands
+        <ABBR REFID="ABBR-0011">Acad.</ABBR>
+        of Arts and Sciences 1993;
+        <ABBR REFID="ABBR-0676">mem.</ABBR>
+        Experimental Psychology
+        <ABBR REFID="ABBR-1173">Soc.</ABBR>
+        1968&amp;ndash;, Research Defence
+        <ABBR REFID="ABBR-1173">Soc.</ABBR>
+        (
+        <ABBR REFID="ABBR-1068">Chair.</ABBR>
+        of Council 2007&amp;ndash;) 1969&amp;ndash;, European Brain and Behaviour
+        <ABBR REFID="ABBR-1173">Soc.</ABBR>
+        1972&amp;ndash;,
+        <ABBR REFID="ABBR-0572">Int.</ABBR>
+        Brain Research
+        <ABBR REFID="ABBR-0804">Org.</ABBR>
+        1973&amp;ndash;, Cambridge Philosophical
+        <ABBR REFID="ABBR-1173">Soc.</ABBR>
+        1975&amp;ndash;,
+        <ABBR REFID="ABBR-1173">Soc.</ABBR>
+        foe Neuroscience 1981&amp;ndash;, Oxford Medical
+        <ABBR REFID="ABBR-1173">Soc.</ABBR>
+        1986&amp;ndash;, Child Vision Research
+        <ABBR REFID="ABBR-1173">Soc.</ABBR>
+        1986&amp;ndash;, British
+        <ABBR REFID="ABBR-0077">Asscn</ABBR>
+        for the Advancement of Science (
+        <ABBR REFID="ABBR-0837">Pres.</ABBR>
+        1997&amp;ndash;98,
+        <ABBR REFID="ABBR-1068">Chair.</ABBR>
+        2001&amp;ndash;03) 1989&amp;ndash;,
+        <ABBR REFID="ABBR-0572">Int.</ABBR>
+        <ABBR REFID="ABBR-1173">Soc.</ABBR>
+        for Myochemistry 1989&amp;ndash;, European Biomedical Research
+        <ABBR REFID="ABBR-0077">Asscn</ABBR>
+        (founder
+        <ABBR REFID="ABBR-0676">mem.</ABBR>
+        ) 1994&amp;ndash;,
+        <ABBR REFID="ABBR-1140">Inst.</ABBR>
+        of Biology 1996&amp;ndash;, Worshipful
+        <ABBR REFID="ABBR-0201">Co.</ABBR>
+        of Spectacle Makers (
+        <ABBR REFID="ABBR-0676">mem.</ABBR>
+        Livery 1998&amp;ndash;) 1997&amp;ndash;,
+        <ABBR REFID="ABBR-1132">Fed.</ABBR>
+        of European Neuroscience
+        <ABBR REFID="ABBR-1173">Socs</ABBR>
+        2000&amp;ndash;; Patron and
+        <ABBR REFID="ABBR-0676">mem.</ABBR>
+        Professional Advisory Panel Headway (
+        <ABBR REFID="ABBR-0741">Nat.</ABBR>
+        Head Injuries
+        <ABBR REFID="ABBR-0077">Asscn</ABBR>
+        ) 1997&amp;ndash;; Patron,
+        <ABBR REFID="ABBR-0077">Asscn</ABBR>
+        for Art, Science,
+        <ABBR REFID="ABBR-0353">Eng</ABBR>
+        and
+        <ABBR REFID="ABBR-0950">Tech.</ABBR>
+        (ASCENT) 1997&amp;ndash;
+    </CAREERPARA>
+    <HONOURSAWARDS>
+        <APPOINTMENTS>Freeman of the City of London 1997;
+            <ABBR REFID="ABBR-1099">Hon.</ABBR>
+            <ABBR REFID="ABBR-0837">Pres.</ABBR>
+            World Cultural Council 1983&amp;ndash;;
+            <ABBR REFID="ABBR-1099">Hon.</ABBR>
+            <ABBR REFID="ABBR-0844">Prof.</ABBR>
+            , Peking Union Medical
+            <ABBR REFID="ABBR-0205">Coll.</ABBR>
+            2005;
+            <ABBR REFID="ABBR-1099">Hon.</ABBR>
+            Fellow, Corpus Christi
+            <ABBR REFID="ABBR-0205">Coll.</ABBR>
+            Cambridge 1994, Cardiff,
+            <ABBR REFID="ABBR-0986">Univ.</ABBR>
+            of Wales 1998, Downing
+            <ABBR REFID="ABBR-0205">Coll.</ABBR>
+            Cambridge 1999;
+            <ABBR REFID="ABBR-1099">Hon.</ABBR>
+            <ABBR REFID="ABBR-0460">FRCP</ABBR>
+            2004;
+            <ABBR REFID="ABBR-1099">Hon.</ABBR>
+            Fellow,
+            <ABBR REFID="ABBR-0086">BAAS</ABBR>
+            2001,
+            <ABBR REFID="ABBR-1140">Inst.</ABBR>
+            of Biology 2004, Indian
+            <ABBR REFID="ABBR-1100">Acad.</ABBR>
+            of Neurosciences 2007, British Pharmacological
+            <ABBR REFID="ABBR-1173">Soc.</ABBR>
+            2007;
+            <ABBR REFID="ABBR-1099">Hon.</ABBR>
+            <ABBR REFID="ABBR-0676">mem.</ABBR>
+            Chelsea Arts Club 1992, Alpha Omega Alpha Honor Medical
+            <ABBR REFID="ABBR-1173">Soc.</ABBR>
+            1996, Physiological
+            <ABBR REFID="ABBR-1173">Soc.</ABBR>
+            1998, Maverick Club 1999, Motor Neurone Disease
+            <ABBR REFID="ABBR-0077">Asscn</ABBR>
+            ;
+            <ABBR REFID="ABBR-0529">Hon.</ABBR>
+            <ABBR REFID="ABBR-0078">Assoc.</ABBR>
+            Rationalist Press
+            <ABBR REFID="ABBR-0077">Asscn</ABBR>
+            1986, Rationalist
+            <ABBR REFID="ABBR-0572">Int.</ABBR>
+            2000, Cambridge Union
+            <ABBR REFID="ABBR-1173">Soc.</ABBR>
+            2003
+        </APPOINTMENTS>
+        ;
+        <ACADEMIC>ten
+            <ABBR REFID="ABBR-1099">hon.</ABBR>
+            degrees including
+            <ABBR REFID="ABBR-1099">Hon.</ABBR>
+            <ABBR REFID="ABBR-0318">DSc</ABBR>
+            (Aston) 1992, (Salford) 1994, (Manchester) 2005, (Aberdeen) 2005, (King&amp;rsquo;s
+            <ABBR REFID="ABBR-0205">Coll.</ABBR>
+            London) 2007;
+            <ABBR REFID="ABBR-1099">Hon.</ABBR>
+            DM (Nottingham) 2008
+        </ACADEMIC>
+        ;
+        <AWARDS>Robert Bing Prize, Swiss
+            <ABBR REFID="ABBR-0011">Acad.</ABBR>
+            of Medical Sciences 1975, Man of the Year, Royal
+            <ABBR REFID="ABBR-0932">Soc.</ABBR>
+            for Disability and Rehabilitation 1978, John Locke Medal, Worshipful
+            <ABBR REFID="ABBR-0932">Soc.</ABBR>
+            of Apothecaries 1983, Netter Prize,
+            <ABBR REFID="ABBR-1051">Acad.</ABBR>
+            <ABBR REFID="ABBR-0741">Nat.</ABBR>
+            de M&amp;eacute;decine, Paris 1984, Bertram Louis Abrahams Lecture, Royal
+            <ABBR REFID="ABBR-0205">Coll.</ABBR>
+            of Physicians 1986, Cairns Memorial Lecture and Medal,
+            <ABBR REFID="ABBR-0932">Soc.</ABBR>
+            of British Neurological Surgeons 1986, Norman McAllister Gregg Lecture and Medal, Royal Australian
+            <ABBR REFID="ABBR-0205">Coll.</ABBR>
+            of Ophthalmologists 1988, Royal
+            <ABBR REFID="ABBR-0932">Soc.</ABBR>
+            Michael Faraday Medal 1989, Robert Doyne Medal, Oxford Ophthalmology Congress 1989, John P. McGovern Science and
+            <ABBR REFID="ABBR-1173">Soc.</ABBR>
+            Lecture and Medal 1990, Montgomery Medal 1991, Sir Douglas Robb Lectures,
+            <ABBR REFID="ABBR-0986">Univ.</ABBR>
+            of Auckland 1991, Osler Medal, Royal
+            <ABBR REFID="ABBR-0205">Coll.</ABBR>
+            of Physicians 1993, Ellison-Cliffe Medal, Royal
+            <ABBR REFID="ABBR-0932">Soc.</ABBR>
+            of Medicine 1993, Charles F. Prentice Award, American
+            <ABBR REFID="ABBR-0011">Acad.</ABBR>
+            of Optometry 1994, Annual Review Prize Lecture, Physiological
+            <ABBR REFID="ABBR-0932">Soc.</ABBR>
+            1995, Centenary Lecture,
+            <ABBR REFID="ABBR-0986">Univ.</ABBR>
+            of Salford 1996, Alcon Prize 1996, Newton Lecture 1997, Cockcroft Lecture,
+            <ABBR REFID="ABBR-0971">UMIST</ABBR>
+            1997, Memorial Medal, Charles
+            <ABBR REFID="ABBR-0986">Univ.</ABBR>
+            , Prague 1998, Alfred Meyer Award, British Neuropathological
+            <ABBR REFID="ABBR-1173">Soc.</ABBR>
+            2001,
+            <ABBR REFID="ABBR-1140">Inst.</ABBR>
+            of Biology Charter Award and Medal 2001, Baly Medal, Royal
+            <ABBR REFID="ABBR-0205">Coll.</ABBR>
+            of Physicians (Dyster Trust) 2001, British Neuroscience
+            <ABBR REFID="ABBR-0077">Asscn</ABBR>
+            Outstanding
+            <ABBR REFID="ABBR-1072">Contrib.</ABBR>
+            to Neuroscience 2001, Menzies Medal, Menzies Foundation, Melbourne 2001, Bioindustry
+            <ABBR REFID="ABBR-0077">Asscn</ABBR>
+            Award for Outstanding Personal
+            <ABBR REFID="ABBR-1072">Contrib.</ABBR>
+            to Bioscience 2004, Lord Crook Gold Medal, Worshipful
+            <ABBR REFID="ABBR-1117">Co.</ABBR>
+            of Spectacle Makers 2004, Edinburgh Medal, City of Edinburgh 2005, Science Educator Award,
+            <ABBR REFID="ABBR-1173">Soc.</ABBR>
+            for Neuroscience 2005, Kenneth Myer Medal, Howard Florey
+            <ABBR REFID="ABBR-1140">Inst.</ABBR>
+            ,
+            <ABBR REFID="ABBR-0986">Univ.</ABBR>
+            of Melbourne 2006, Harveian Oration, Royal
+            <ABBR REFID="ABBR-0205">Coll.</ABBR>
+            of Physicians, Ferrier Award, Royal
+            <ABBR REFID="ABBR-1173">Soc.</ABBR>
+            , Friendship Award (China), Ralph W. Gerard Award,
+            <ABBR REFID="ABBR-1173">Soc.</ABBR>
+            for Neuroscience
+        </AWARDS>
+    </HONOURSAWARDS>
+    <FILMS>
+        <HEADING>Films:</HEADING>
+        <PARA>several educational films on neuroscience (Silver Award,
+            <ABBR REFID="ABBR-0129">BMA</ABBR>
+            Film Competition 1972, Silver Award, Padua
+            <ABBR REFID="ABBR-0572">Int.</ABBR>
+            Film Festival 1973,
+            <ABBR REFID="ABBR-0129">BMA</ABBR>
+            Certificate of Educational Commendation 1974)
+        </PARA>
+    </FILMS>
+    <RADIO>
+        <HEADING>Radio:</HEADING>
+        <PARA>The Reith Lectures (
+            <ABBR REFID="ABBR-0096">BBC</ABBR>
+            Radio 4) 1976, Machines with Minds (five-part series) 1983
+        </PARA>
+    </RADIO>
+    <TV>
+        <HEADING>Television:</HEADING>
+        <PARA>Royal
+            <ABBR REFID="ABBR-1202">Inst.</ABBR>
+            Christmas Lectures 1983, The Mind Machine (13-part series) 1988
+        </PARA>
+    </TV>
+    <PUBLICATIONS>
+        <HEADING>Publications include:</HEADING>
+        <PARA>Handbook of Psychobiology (
+            <ABBR REFID="ABBR-0340">ed.</ABBR>
+            ) 1975, Mechanics of the Mind 1977, Mindwaves (
+            <ABBR REFID="ABBR-0340">ed.</ABBR>
+            ) 1987, The Mind Machine 1988, Images and Understanding (
+            <ABBR REFID="ABBR-0340">ed.</ABBR>
+            ) 1990, Vision: Coding and Efficiency 1990, Sex and Society 1999, Oxford Companion to the Body 2001, The Physiology of Cognitive Processes (co-
+            <ABBR REFID="ABBR-0340">ed.</ABBR>
+            ) 2003, The Roots of Visual Awareness (co-
+            <ABBR REFID="ABBR-0340">ed.</ABBR>
+            ) 2003;
+            <ABBR REFID="ABBR-1072">contribs</ABBR>
+            to Constraints on Learning 1973, Illusion in Art and Nature 1973, The Neurosciences Third Study Program 1974 and to professional journals,
+            <ABBR REFID="ABBR-0741">nat.</ABBR>
+            newspapers and magazines
+        </PARA>
+    </PUBLICATIONS>
+    <LEISUREINTERESTS>
+        <HEADING>Leisure interests:</HEADING>
+        <PARA>running and the arts</PARA>
+    </LEISUREINTERESTS>
+    <CONTACTDETAILS TYPE="CONTACT">
+        <MAILNAME>Prof. Sir Colin Blakemore</MAILNAME>
+        <DEARNAME>Dear Sir Colin</DEARNAME>
+        <ADDRESS TYPE="OFFICE">11 Northmoor Road,
+            <TOWN>Oxford</TOWN>
+            ,
+            <POSTCODE>OX2 6UW</POSTCODE>
+            ,
+            <COUNTRY>England</COUNTRY>
+        </ADDRESS>
+        <TELEPHONE>7802-291059 (mobile)</TELEPHONE>
+    </CONTACTDETAILS>
+    <CONTACTDETAILS TYPE="PUBLIC">
+        <ADDRESS TYPE="OFFICE">Centre for the Study of the Senses, School of Advanced Study, University of London, Senate House, Malet Street,
+            <TOWN>London</TOWN>
+            ,
+            <POSTCODE>WC1E 7HU</POSTCODE>
+            ,
+            <COUNTRY>England</COUNTRY>
+        </ADDRESS>
+        <TELEPHONE TYPE="OFFICE">(20) 7862-8682</TELEPHONE>
+        <FAX TYPE="OFFICE">
+            <?Pub Caret1?>
+            (20) 7862-8639</FAX>
+        <EMAIL TYPE="OFFICE">colin.blakemore@sas.ac.uk</EMAIL>
+        <WEBSITE TYPE="OFFICE">philosophy.sas.ac.uk/centres/censes</WEBSITE>
+    </CONTACTDETAILS>
+</ENTRY>
