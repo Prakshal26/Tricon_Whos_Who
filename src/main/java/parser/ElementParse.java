@@ -68,7 +68,8 @@ public class ElementParse {
 
 
             case XPathConstants.PROFESSION:
-                person.getProfession().add(element.getTextContent());
+                //person.getProfession().add(element.getTextContent());
+                person.getProfession().add(Qualifications.convert(element));
                 break;
 
             case XPathConstants.FILMS:
@@ -155,7 +156,5 @@ public class ElementParse {
         objectList.add(person);
         objectList.add(crossRefEntry);
         return objectList;
-
     }
-
 }
