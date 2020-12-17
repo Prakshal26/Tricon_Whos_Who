@@ -26,24 +26,26 @@ public class DomParserDemo {
             connection = postgreSQLJDBC.connect();
             DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
             DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
-            File dir = new File("C:\\Users\\lenovo\\IdeaProjects\\x_json\\WhosWho_IgnoreBadIWWList\\WhosWho_IgnoreBadIWWList");
+            File dir = new File("C:\\Users\\lenovo\\IdeaProjects\\x_json\\WhosWho_IgnoreBadIWWList\\Test");
 
             File [] files = dir.listFiles();
             int inserted_id = 0;
+            int file_count =1;
             for(File file : files) {
                 if(file.isFile() && file.getName().endsWith(".xml")) {
                     Document doc = dBuilder.parse(file);
                     List<Object> objectList = ElementParse.parseFiles(doc);
                     Person person1 = (Person) objectList.get(0);
                     CrossRefEntry crossRefEntry = (CrossRefEntry) objectList.get(1);
+                    System.out.println("File "+ file_count++);
                     if (crossRefEntry.getXml_surname() != null) {
 
                         postgreSQLJDBC.insertCrossRefEntry(connection,crossRefEntry);
 
-                        ObjectMapper mapper = new ObjectMapper();
-                        String jsonString = mapper.writeValueAsString(crossRefEntry);
-                        System.out.println(jsonString);
-                       // File filet = new File ("person.json");
+//                        ObjectMapper mapper = new ObjectMapper();
+//                        String jsonString = mapper.writeValueAsString(crossRefEntry);
+//                        System.out.println(jsonString);
+//                       // File filet = new File ("person.json");
                         //mapper.writeValue(filet,person1);
                     } else {
                         inserted_id = postgreSQLJDBC.insertPeople(connection, person1);
@@ -53,13 +55,12 @@ public class DomParserDemo {
                         else {
                             System.out.println("Issue with Insertion");
                         }
-                        ObjectMapper mapper = new ObjectMapper();
-                        String jsonString = mapper.writeValueAsString(person1);
-                        System.out.println(jsonString);
+//                        ObjectMapper mapper = new ObjectMapper();
+//                        String jsonString = mapper.writeValueAsString(person1);
+//                        System.out.println(jsonString);
                     }
                 }
             }
-
         } catch (Exception e) {
             e.printStackTrace();
         }

@@ -44,40 +44,52 @@ public class ContactDetails {
                     addressAbbrHandler(eElement.getChildNodes(),stringBuilder);
                   //  stringBuilder.append(eElement.getTextContent());
                     if(eElement.hasAttribute("TYPE"))
-                    stringBuilder.append(" ("+(eElement.getAttribute("TYPE").toLowerCase())+"); ");
+                    stringBuilder.append(" ("+(eElement.getAttribute("TYPE").toLowerCase())+")");
+
+                    stringBuilder.append("; ");
                 }
                 if (eElement.getTagName().equalsIgnoreCase("TELEPHONE")) {
                     stringBuilder.append("<b>Tel:</b> ");
                     stringBuilder.append(eElement.getTextContent());
                     if(eElement.hasAttribute("TYPE"))
-                    stringBuilder.append(" ("+(eElement.getAttribute("TYPE").toLowerCase())+"); ");
+                    stringBuilder.append(" ("+(eElement.getAttribute("TYPE").toLowerCase())+")");
+
+                    stringBuilder.append("; ");
                 }
                 if (eElement.getTagName().equalsIgnoreCase("FAX")) {
                     stringBuilder.append("<b>Fax:</b> ");
                     stringBuilder.append(eElement.getTextContent());
                     if(eElement.hasAttribute("TYPE"))
-                    stringBuilder.append(" ("+(eElement.getAttribute("TYPE").toLowerCase())+"); ");
+                    stringBuilder.append(" ("+(eElement.getAttribute("TYPE").toLowerCase())+")");
+
+                    stringBuilder.append("; ");
                 }
                 if (eElement.getTagName().equalsIgnoreCase("TELEX")) {
                     stringBuilder.append("<b>Email:</b> <a href=\"mailto:");
                     stringBuilder.append((eElement.getTextContent())+"\">");
                     stringBuilder.append((eElement.getTextContent())+"</a>");
                     if(eElement.hasAttribute("TYPE"))
-                    stringBuilder.append(" ("+(eElement.getAttribute("TYPE").toLowerCase())+"); ");
+                    stringBuilder.append(" ("+(eElement.getAttribute("TYPE").toLowerCase())+")");
+
+                    stringBuilder.append("; ");
                 }
                 if (eElement.getTagName().equalsIgnoreCase("EMAIL")) {
                     stringBuilder.append("<b>Email:</b> <a href=\"mailto:");
                     stringBuilder.append((eElement.getTextContent())+"\">");
                     stringBuilder.append((eElement.getTextContent())+"</a>");
                     if(eElement.hasAttribute("TYPE"))
-                    stringBuilder.append(" ("+(eElement.getAttribute("TYPE").toLowerCase())+"); ");
+                    stringBuilder.append(" ("+(eElement.getAttribute("TYPE").toLowerCase())+")");
+
+                    stringBuilder.append("; ");
                 }
                 if (eElement.getTagName().equalsIgnoreCase("WEBSITE")) {
                     stringBuilder.append("<b>Website:</b> <a href=\"");
                     stringBuilder.append((eElement.getTextContent())+"\">");
                     stringBuilder.append((eElement.getTextContent())+"</a>");
                     if(eElement.hasAttribute("TYPE"))
-                    stringBuilder.append(" ("+(eElement.getAttribute("TYPE").toLowerCase())+").");
+                    stringBuilder.append(" ("+(eElement.getAttribute("TYPE").toLowerCase())+")");
+
+                    stringBuilder.append(". ");
                 }
             }
         }
