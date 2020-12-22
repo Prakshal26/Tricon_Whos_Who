@@ -21,29 +21,29 @@ public class Name {
             if (node.getNodeType() == Node.ELEMENT_NODE) {
                 Element subElement = (Element) node;
 
-                if (subElement.getTagName()=="INDEXEDNAME") {
-                    StringBuilder surNameBuilder = new StringBuilder();
-                    printNote(subElement.getChildNodes(),surNameBuilder);
-                    person.setSurname(surNameBuilder.toString());
+                if (subElement.getTagName().equalsIgnoreCase("INDEXEDNAME")) {
+                    StringBuilder indexedNameBuilder = new StringBuilder();
+                    printNote(subElement.getChildNodes(),indexedNameBuilder);
+                    person.setIndexedname(indexedNameBuilder.toString());
                 }
-                if (subElement.getTagName() == "NOBILITY") {
+                if (subElement.getTagName().equalsIgnoreCase("NOBILITY")) {
                     StringBuilder nobilityBuilder = new StringBuilder();
                     nobilityBuilder.append(", ");
                     printNoteNobility(subElement.getChildNodes(), nobilityBuilder);
                     person.setNobility(nobilityBuilder.toString());
                 }
-                if (subElement.getTagName() == "TITLES") {
+                if (subElement.getTagName().equalsIgnoreCase("TITLES") ) {
                     StringBuilder titleBuilder = new StringBuilder();
                     titleBuilder.append(", ");
                     printNote(subElement.getChildNodes(), titleBuilder);
                     person.setTitle(titleBuilder.toString());
                 }
-                if (subElement.getTagName() == "GIVENNAME") {
-                    StringBuilder firstNameBuilder = new StringBuilder();
-                    printNote(subElement.getChildNodes(), firstNameBuilder);
-                    person.setFirstname(firstNameBuilder.toString());
+                if (subElement.getTagName().equalsIgnoreCase("GIVENNAME")) {
+                    StringBuilder givenNameBuilder = new StringBuilder();
+                    printNote(subElement.getChildNodes(), givenNameBuilder);
+                    person.setGivenname(givenNameBuilder.toString());
                 }
-                if (subElement.getTagName() == "PSEUDONYM") {
+                if (subElement.getTagName().equalsIgnoreCase("PSEUDONYM")) {
                     StringBuilder pseudonymBuilder = new StringBuilder();
                     pseudonymBuilder.append("(");
                     printNote(subElement.getChildNodes(), pseudonymBuilder);
@@ -76,7 +76,6 @@ public class Name {
                     stringBuilder.append((eElement.getTextContent()) + "</abbr> ");
                 }
 
-
                 if (tempNode.hasChildNodes() && eElement.getTagName()!="ABBR") {
                     // loop again if has child nodes
                     printNote(tempNode.getChildNodes(), stringBuilder);
@@ -106,7 +105,6 @@ public class Name {
                     stringBuilder.append(HashMapParser.getAbbrMap().get(eElement.getAttribute("REFID")));
                     stringBuilder.append(" ");
                 }
-
 
                 if (tempNode.hasChildNodes() && eElement.getTagName()!="ABBR") {
                     // loop again if has child nodes

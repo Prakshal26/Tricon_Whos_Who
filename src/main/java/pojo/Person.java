@@ -9,9 +9,10 @@ import java.util.List;
 public class Person {
 
 
+    private String id;
 
-    private String surname;
-    private String firstname;
+    private String indexedname;
+    private String givenname;
     private String title;
     private String nobility;
     private String pseudonym;
@@ -46,24 +47,34 @@ public class Person {
     private String contact_details;
     private String management;
 
+    private String region;
+    private String subRegion;
+
     private int dead;
     private String gender;
 
-
-    public String getSurname() {
-        return surname;
+    public String getId() {
+        return id;
     }
 
-    public void setSurname(String surname) {
-        this.surname = surname;
+    public void setId(String id) {
+        this.id = id;
     }
 
-    public String getFirstname() {
-        return firstname;
+    public String getIndexedname() {
+        return indexedname;
     }
 
-    public void setFirstname(String firstname) {
-        this.firstname = firstname;
+    public void setIndexedname(String indexedname) {
+        this.indexedname = indexedname;
+    }
+
+    public String getGivenname() {
+        return givenname;
+    }
+
+    public void setGivenname(String givenname) {
+        this.givenname = givenname;
     }
 
     public String getTitle() {
@@ -366,5 +377,21 @@ public class Person {
 
     public void setGender(String gender) {
         this.gender = gender;
+    }
+
+    public String getRegion() {
+        return region;
+    }
+
+    public void setRegion(String region) {
+        this.region = region;
+    }
+
+    public String getSubRegion() {
+        return subRegion;
+    }
+
+    public void setSubRegion(String subRegion) {
+        this.subRegion = subRegion;
     }
 }

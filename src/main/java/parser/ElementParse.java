@@ -120,16 +120,18 @@ public class ElementParse {
 
         }
     }
+
     public static List<Object> parseFiles(Document doc) {
 
+        Person person = new Person();
+        CrossRefEntry crossRefEntry = new CrossRefEntry();
+
         doc.getDocumentElement().normalize();
-        Node entryNode =doc.getDocumentElement();
+        Node entryNode = doc.getDocumentElement();
         NodeList nodeList = entryNode.getChildNodes();
 
         Element entryElement = (Element) entryNode;
 
-        Person person = new Person();
-        CrossRefEntry crossRefEntry = new CrossRefEntry();
 
         if (entryElement.hasAttribute("DEAD")) {
             String deadVar = entryElement.getAttribute("DEAD");
@@ -141,7 +143,15 @@ public class ElementParse {
         }
 
         if (entryElement.hasAttribute("ID")) {
-            crossRefEntry.setXml_id(entryElement.getAttribute("ID"));
+            String id = entryElement.getAttribute("ID").toLowerCase();
+            crossRefEntry.setId(id);
+            person.setId(id);
+        }
+        if (entryElement.hasAttribute("REGION")) {
+            person.setRegion(entryElement.getAttribute("REGION"));
+        }
+        if (entryElement.hasAttribute("SUB-REGION")) {
+            person.setSubRegion(entryElement.getAttribute("SUB-REGION"));
         }
 
         for (int i=0; i<nodeList.getLength();i++) {

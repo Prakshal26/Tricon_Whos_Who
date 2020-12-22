@@ -26,7 +26,7 @@ public class DomParserDemo {
             connection = postgreSQLJDBC.connect();
             DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
             DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
-            File dir = new File("C:\\Users\\lenovo\\IdeaProjects\\x_json\\WhosWho_IgnoreBadIWWList\\Test");
+            File dir = new File("C:\\Users\\lenovo\\IdeaProjects\\x_json\\WhosWho_IgnoreBadIWWList\\WhosWho_IgnoreBadIWWList");
 
             File [] files = dir.listFiles();
             int inserted_id = 0;
@@ -34,19 +34,16 @@ public class DomParserDemo {
             for(File file : files) {
                 if(file.isFile() && file.getName().endsWith(".xml")) {
                     Document doc = dBuilder.parse(file);
+
                     List<Object> objectList = ElementParse.parseFiles(doc);
+
                     Person person1 = (Person) objectList.get(0);
                     CrossRefEntry crossRefEntry = (CrossRefEntry) objectList.get(1);
+
                     System.out.println("File "+ file_count++);
-                    if (crossRefEntry.getXml_surname() != null) {
 
+                    if (crossRefEntry.getIndexedName() != null) {
                         postgreSQLJDBC.insertCrossRefEntry(connection,crossRefEntry);
-
-//                        ObjectMapper mapper = new ObjectMapper();
-//                        String jsonString = mapper.writeValueAsString(crossRefEntry);
-//                        System.out.println(jsonString);
-//                       // File filet = new File ("person.json");
-                        //mapper.writeValue(filet,person1);
                     } else {
                         inserted_id = postgreSQLJDBC.insertPeople(connection, person1);
                         if (inserted_id != 0) {
@@ -55,9 +52,6 @@ public class DomParserDemo {
                         else {
                             System.out.println("Issue with Insertion");
                         }
-//                        ObjectMapper mapper = new ObjectMapper();
-//                        String jsonString = mapper.writeValueAsString(person1);
-//                        System.out.println(jsonString);
                     }
                 }
             }
@@ -69,4 +63,5 @@ public class DomParserDemo {
         }
     }
 }
+
 

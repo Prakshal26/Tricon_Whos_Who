@@ -31,15 +31,16 @@ public class PostgreSQLJDBC {
         Statement stmt = null;
         try {
 
-            PreparedStatement statement = connection.prepareStatement("INSERT into ww_people(surname, " +
-                    "firstname,title,nobility,pseudonym,portrait_image,qualifications,nationality,presentposition,nameatbirth,dateofbirth,placeofbirth," +
+            PreparedStatement statement = connection.prepareStatement("INSERT into ww_people(id, indexedname, " +
+                    "givenname,title,nobility,pseudonym,portrait_image,qualifications,nationality,presentposition,nameatbirth,dateofbirth,placeofbirth," +
                     "dateofdeath,parentage,family,education,careerpara,honoursawards," +
                     "films,plays,tv,music,dance,artexhibition,radio,achievements,publications,leisureinterests," +
-                    "contactdetails,management,dead,gender)" + "VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",Statement.RETURN_GENERATED_KEYS);
+                    "contactdetails,management,dead,gender,region,subRegion)" + "VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",Statement.RETURN_GENERATED_KEYS);
 
             int i = 1;
-            statement.setString(i++, person.getSurname());
-            statement.setString(i++, person.getFirstname());
+            statement.setString(i++, person.getId());
+            statement.setString(i++, person.getIndexedname());
+            statement.setString(i++, person.getGivenname());
             statement.setString(i++, person.getTitle());
             statement.setString(i++, person.getNobility());
             statement.setString(i++, person.getPseudonym());
@@ -70,6 +71,8 @@ public class PostgreSQLJDBC {
             statement.setString(i++, person.getManagement());
             statement.setInt(i++, person.getDead());
             statement.setString(i++, person.getGender());
+            statement.setString(i++, person.getRegion());
+            statement.setString(i++, person.getSubRegion());
 
             statement.execute();
 
@@ -112,16 +115,16 @@ public class PostgreSQLJDBC {
 
 
         try {
-            PreparedStatement statement = connection.prepareStatement("INSERT into ww_crossrefentry(xml_id, " +
-                    "xml_surname, xml_firstname, xml_nobility, xml_title, xml_pseudonym, referred_id,referred_name)" + "VALUES (?,?,?,?,?,?,?,?)");
+            PreparedStatement statement = connection.prepareStatement("INSERT into ww_crossrefentry(id, " +
+                    "indexedname, givenname, nobility, title, pseudonym, referred_id,referred_name)" + "VALUES (?,?,?,?,?,?,?,?)");
 
             int i =1;
-            statement.setString(i++, crossRefEntry.getXml_id());
-            statement.setString(i++, crossRefEntry.getXml_surname());
-            statement.setString(i++, crossRefEntry.getXml_firstname());
-            statement.setString(i++, crossRefEntry.getXml_nobility());
-            statement.setString(i++, crossRefEntry.getXml_title());
-            statement.setString(i++, crossRefEntry.getXml_pseudonym());
+            statement.setString(i++, crossRefEntry.getId());
+            statement.setString(i++, crossRefEntry.getIndexedName());
+            statement.setString(i++, crossRefEntry.getGivenName());
+            statement.setString(i++, crossRefEntry.getNobility());
+            statement.setString(i++, crossRefEntry.getTitle());
+            statement.setString(i++, crossRefEntry.getPseudonym());
             statement.setString(i++, crossRefEntry.getReferred_id());
             statement.setString(i++, crossRefEntry.getReferred_name());
 

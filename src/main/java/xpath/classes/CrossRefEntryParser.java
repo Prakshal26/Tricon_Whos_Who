@@ -13,20 +13,20 @@ public class CrossRefEntryParser {
 
         StringBuilder referredNameBuilder = new StringBuilder();
 
-        if (person.getFirstname() != null) {
-            crossRefEntry.setXml_firstname(person.getFirstname());
+        if (person.getGivenname() != null) {
+            crossRefEntry.setGivenName(person.getGivenname());
         }
-        if (person.getSurname() != null) {
-            crossRefEntry.setXml_surname(person.getSurname());
+        if (person.getIndexedname() != null) {
+            crossRefEntry.setIndexedName(person.getIndexedname());
         }
         if (person.getNobility() != null) {
-            crossRefEntry.setXml_nobility(person.getNobility());
+            crossRefEntry.setNobility(person.getNobility());
         }
         if (person.getTitle() != null) {
-            crossRefEntry.setXml_title(person.getTitle());
+            crossRefEntry.setTitle(person.getTitle());
         }
         if (person.getPseudonym() != null) {
-            crossRefEntry.setXml_pseudonym(person.getPseudonym());
+            crossRefEntry.setPseudonym(person.getPseudonym());
         }
 
         referredNameBuilder.append("<a href=\"https://www.worldwhoswho.com/views/entry.html?id=");

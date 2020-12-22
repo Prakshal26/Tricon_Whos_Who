@@ -1,0 +1,60 @@
+
+CREATE TABLE ww_people (
+    people_id SERIAL PRIMARY KEY,
+	id VARCHAR(255),
+    indexedname TEXT,
+	givenname TEXT,
+	title TEXT,
+	nobility TEXT,
+	pseudonym TEXT,
+	portrait_image TEXT,
+	qualifications TEXT,
+	nationality VARCHAR(255),
+	presentPosition TEXT,
+	nameAtBirth VARCHAR(255),
+	dateOfBirth VARCHAR(255),
+	placeOfBirth TEXT,
+	dateOfDeath VARCHAR(255),
+	parentage TEXT,
+	family TEXT,
+	education TEXT,
+	careerPara TEXT,
+	honoursAwards TEXT,
+	films TEXT,
+	plays TEXT,
+	tv TEXT,
+	music TEXT,
+	dance TEXT,
+	artExhibition TEXT,
+	radio TEXT,
+	achievements TEXT,
+	publications TEXT,
+	leisureInterests TEXT,
+	contactDetails TEXT,
+	management TEXT,
+	dead INT,
+	gender VARCHAR(255),
+	region VARCHAR(255),
+	subRegion VARCHAR(255)
+);
+
+
+CREATE TABLE ww_profession (
+    profession_id SERIAL PRIMARY KEY,
+	people INT,
+    profession_name VARCHAR(255),
+    FOREIGN KEY(people) REFERENCES ww_people(people_id)
+);
+
+CREATE TABLE ww_crossrefentry (
+    crossrefid SERIAL PRIMARY KEY,
+	id VARCHAR(255),
+	indexedname TEXT,
+	givenname TEXT,
+	nobility TEXT,
+	title TEXT,
+	pseudonym TEXT,
+	referred_id TEXT,
+	referred_name TEXT
+);
+
