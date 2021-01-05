@@ -36,7 +36,8 @@ public class CrossRefEntryParser {
         crossRefEntry.setReferred_name(referredNameBuilder.toString());
 
         if (element.hasAttribute("SLTARGETID")) {
-            crossRefEntry.setReferred_id(element.getAttribute("SLTARGETID"));
+            String starId = element.getAttribute("SLTARGETID");
+            crossRefEntry.setReferred_id(starId.toLowerCase());
         }
     }
 
