@@ -31,11 +31,11 @@ public class PostgreSQLJDBC {
         Statement stmt = null;
         try {
 
-            PreparedStatement statement = connection.prepareStatement("INSERT into ww_people(id, indexedname, " +
+            PreparedStatement statement = connection.prepareStatement("INSERT into ww_people(xml_id, indexedname, " +
                     "givenname,title,nobility,pseudonym,portrait_image,qualifications,nationality,presentposition,nameatbirth,dateofbirth,placeofbirth," +
                     "dateofdeath,parentage,family,education,careerpara,honoursawards," +
                     "films,plays,tv,music,dance,artexhibition,radio,achievements,publications,leisureinterests," +
-                    "contactdetails,management,dead,gender,region,subRegion)" + "VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",Statement.RETURN_GENERATED_KEYS);
+                    "contactdetails,management_address,dead,gender,region,subRegion)" + "VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",Statement.RETURN_GENERATED_KEYS);
 
             int i = 1;
             statement.setString(i++, person.getId());
@@ -95,7 +95,7 @@ public class PostgreSQLJDBC {
     public void insertProfession(Connection connection, List<String> profession, int id) {
 
         try {
-            PreparedStatement statement = connection.prepareStatement("INSERT into ww_profession(people, " +
+            PreparedStatement statement = connection.prepareStatement("INSERT into ww_profession(people_id, " +
                     "profession_name)" + "VALUES (?,?)");
 
             for (String s : profession) {

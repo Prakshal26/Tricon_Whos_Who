@@ -34,7 +34,7 @@ public class Name {
                 }
                 if (subElement.getTagName().equalsIgnoreCase("TITLES") ) {
                     StringBuilder titleBuilder = new StringBuilder();
-                    titleBuilder.append(", ");
+                    //titleBuilder.append(", ");
                     printNote(subElement.getChildNodes(), titleBuilder);
                     person.setTitle(titleBuilder.toString());
                 }
