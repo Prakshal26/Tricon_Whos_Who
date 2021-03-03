@@ -42,8 +42,7 @@ public class Films {
 
             // make sure it's element node.
             if (tempNode.getNodeType() == Node.TEXT_NODE) {
-                stringBuilder.append(tempNode.getTextContent().trim());
-                stringBuilder.append(" ");
+                stringBuilder.append(tempNode.getNodeValue());
             }
 
             if (tempNode.getNodeType() == Node.ELEMENT_NODE) {
@@ -52,7 +51,7 @@ public class Films {
                 if (eElement.getTagName() == "ABBR") {
                     stringBuilder.append("<abbr title=\"");
                     stringBuilder.append(HashMapParser.getAbbrMap().get(eElement.getAttribute("REFID")) + "\">");
-                    stringBuilder.append((eElement.getTextContent()) + "</abbr> ");
+                    stringBuilder.append((eElement.getTextContent()) + "</abbr>");
                 }
 
                 if (tempNode.hasChildNodes() && eElement.getTagName()!="ABBR") {

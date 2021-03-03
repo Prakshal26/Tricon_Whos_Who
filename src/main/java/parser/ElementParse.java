@@ -57,7 +57,7 @@ public class ElementParse {
                 break;
 
             case XPathConstants.EDUCATION:
-                person.setEducation(PracticeQualifications.convert(element));
+                person.setEducation(HandleAbbr.convert(element));
                 break;
             case XPathConstants.CAREERPARA:
                 person.setCareer(HandleAbbr.convert(element));
