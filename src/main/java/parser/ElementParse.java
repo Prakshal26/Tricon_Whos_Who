@@ -28,48 +28,48 @@ public class ElementParse {
                 break;
 
             case XPathConstants.QUALIFICATIONS:
-                person.setQualifications(Qualifications.convert(element));
+                person.setQualifications(HandleAbbr.convert(element));
                 break;
             case XPathConstants.NATIONALITY:
-                person.setNationality(Qualifications.convert(element));
+                person.setNationality(HandleAbbr.convert(element));
                 break;
             case XPathConstants.PRESENTPOSITION:
-                person.setPresentPosition(Qualifications.convert(element));
+                person.setPresentPosition(HandleAbbr.convert(element));
                 break;
             case XPathConstants.NAMEATBIRTH:
-                person.setNameAtBirth(Qualifications.convert(element));
+                person.setNameAtBirth(HandleAbbr.convert(element));
                 break;
             case XPathConstants.DATEOFBIRTH:
-                person.setDateOfBirth(Qualifications.convert(element));
+                person.setDateOfBirth(HandleAbbr.convert(element));
                 break;
             case XPathConstants.PLACEOFBIRTH:
-                person.setPlaceOfbirth(Qualifications.convert(element));
+                person.setPlaceOfbirth(HandleAbbr.convert(element));
                 break;
             case XPathConstants.DATEOFDEATH:
-                person.setDateOfDeath(Qualifications.convert(element));
+                person.setDateOfDeath(HandleAbbr.convert(element));
                 break;
             case XPathConstants.PARENTAGE:
-                person.setParentage(Qualifications.convert(element));
+                person.setParentage(HandleAbbr.convert(element));
                 break;
             case XPathConstants.IMMEDIATEFAMILY:
             case XPathConstants.EXTENDEDFAMILY:
-                person.setFamily(Qualifications.convert(element));
+                person.setFamily(HandleAbbr.convert(element));
                 break;
 
             case XPathConstants.EDUCATION:
-                person.setEducation(Qualifications.convert(element));
+                person.setEducation(PracticeQualifications.convert(element));
                 break;
             case XPathConstants.CAREERPARA:
-                person.setCareer(Qualifications.convert(element));
+                person.setCareer(HandleAbbr.convert(element));
                 break;
             case XPathConstants.HONOURSAWARDS:
-                person.setHonourAndAwards(Qualifications.convert(element));
+                person.setHonourAndAwards(HandleAbbr.convert(element));
                 break;
 
 
             case XPathConstants.PROFESSION:
                 //person.getProfession().add(element.getTextContent());
-                person.getProfession().add(Qualifications.convert(element));
+                person.getProfession().add(HandleAbbr.convert(element));
                 break;
 
             case XPathConstants.FILMS:

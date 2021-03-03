@@ -5,7 +5,8 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import parser.HashMapParser;
 
-public class Qualifications {
+public class Qualification {
+
     public static String convert(Element element){
 
         StringBuilder stringBuilder = new StringBuilder();
@@ -14,6 +15,7 @@ public class Qualifications {
         } else {
             stringBuilder.append(element.getTextContent());
         }
+
         return stringBuilder.toString();
     }
 
@@ -27,7 +29,7 @@ public class Qualifications {
 
             // make sure it's element node.
             if (tempNode.getNodeType() == Node.TEXT_NODE) {
-               // System.out.println("Text = "+tempNode.getTextContent());
+                // System.out.println("Text = "+tempNode.getTextContent());
                 stringBuilder.append(tempNode.getTextContent().trim());
                 stringBuilder.append(" ");
             }
@@ -39,7 +41,7 @@ public class Qualifications {
                 if (eElement.getTagName().equalsIgnoreCase("ABBR")) {
                     stringBuilder.append("<abbr title=\"");
                     stringBuilder.append(HashMapParser.getAbbrMap().get(eElement.getAttribute("REFID")) + "\">");
-                    stringBuilder.append((eElement.getTextContent()) + "</abbr> ");
+                    stringBuilder.append((eElement.getTextContent()) + "</abbr>");
                 }
                 if (eElement.getTagName().equalsIgnoreCase("XREF")) {
                     stringBuilder.append("<a href=\"https://www.worldwhoswho.com/views/entry.html?id=");

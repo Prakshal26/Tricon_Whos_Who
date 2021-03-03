@@ -26,7 +26,7 @@ public class DomParserDemo {
             connection = postgreSQLJDBC.connect();
             DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
             DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
-            File dir = new File("C:\\Users\\lenovo\\IdeaProjects\\x_json\\WhosWho_IgnoreBadIWWList\\WhosWho_IgnoreBadIWWList");
+            File dir = new File("C:\\Users\\Admin\\IdeaProjects\\x_json\\WhosWho_IgnoreBadIWWList\\Test");
 
             File [] files = dir.listFiles();
             int inserted_id = 0;

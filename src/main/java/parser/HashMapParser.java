@@ -17,7 +17,7 @@ public class HashMapParser {
     public static void abbrConverter() {
 
         try {
-            File inputFile = new File("C:\\Users\\lenovo\\IdeaProjects\\x_json\\Dom\\src\\main\\resources\\abbreviations.xml");
+            File inputFile = new File("C:\\Users\\admin\\IdeaProjects\\x_json\\Dom\\src\\main\\resources\\abbreviations.xml");
             DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
             DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
             Document doc = dBuilder.parse(inputFile);
