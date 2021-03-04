@@ -105,8 +105,8 @@ public class ContactDetails {
             // make sure it's element node.
             if (tempNode.getNodeType() == Node.TEXT_NODE) {
                // System.out.println("Text = "+tempNode.getTextContent());
-                stringBuilder.append(tempNode.getTextContent().trim());
-                stringBuilder.append(" ");
+                stringBuilder.append(tempNode.getNodeValue());
+               // stringBuilder.append(" ");
             }
 
             if (tempNode.getNodeType() == Node.ELEMENT_NODE) {
@@ -117,13 +117,13 @@ public class ContactDetails {
                 if (eElement.getTagName().equalsIgnoreCase("ABBR")) {
                     stringBuilder.append("<abbr title=\"");
                     stringBuilder.append(HashMapParser.getAbbrMap().get(eElement.getAttribute("REFID")) + "\">");
-                    stringBuilder.append((eElement.getTextContent()) + "</abbr> ");
+                    stringBuilder.append((eElement.getTextContent()) + "</abbr>");
                 }
                 if (eElement.getTagName().equalsIgnoreCase("XREF")) {
                     stringBuilder.append("<a href=\"https://www.worldwhoswho.com/views/entry.html?id=");
                     stringBuilder.append((eElement.getAttribute("SLTARGETID").toLowerCase())+"\">");
                     stringBuilder.append(eElement.getTextContent());
-                    stringBuilder.append("</a> ");
+                    stringBuilder.append("</a>");
                 }
 
                 if (tempNode.hasChildNodes() && eElement.getTagName()!="ABBR" && eElement.getTagName()!="XREF") {

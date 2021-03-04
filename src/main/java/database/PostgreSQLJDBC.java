@@ -13,7 +13,7 @@ public class PostgreSQLJDBC {
         try {
             Class.forName("org.postgresql.Driver");
             connection = DriverManager
-                    .getConnection("jdbc:postgresql://localhost:5432/ww_data_parsing_demo",
+                    .getConnection("jdbc:postgresql://localhost:5432/ww_data_parsing",
                             "postgres", "root");
 
         } catch (Exception e) {

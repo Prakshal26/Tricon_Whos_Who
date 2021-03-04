@@ -28,7 +28,7 @@ public class Name {
                 }
                 if (subElement.getTagName().equalsIgnoreCase("NOBILITY")) {
                     StringBuilder nobilityBuilder = new StringBuilder();
-                    nobilityBuilder.append(", ");
+                    //nobilityBuilder.append(", ");
                     printNoteNobility(subElement.getChildNodes(), nobilityBuilder);
                     person.setNobility(nobilityBuilder.toString());
                 }
@@ -64,7 +64,7 @@ public class Name {
 
             // make sure it's element node.
             if (tempNode.getNodeType() == Node.TEXT_NODE) {
-                stringBuilder.append(tempNode.getTextContent().trim());
+                stringBuilder.append(tempNode.getNodeValue());
             }
 
             if (tempNode.getNodeType() == Node.ELEMENT_NODE) {
@@ -73,7 +73,7 @@ public class Name {
                 if (eElement.getTagName() == "ABBR") {
                     stringBuilder.append("<abbr title=\"");
                     stringBuilder.append(HashMapParser.getAbbrMap().get(eElement.getAttribute("REFID")) + "\">");
-                    stringBuilder.append((eElement.getTextContent()) + "</abbr> ");
+                    stringBuilder.append((eElement.getTextContent()) + "</abbr>");
                 }
 
                 if (tempNode.hasChildNodes() && eElement.getTagName()!="ABBR") {
@@ -94,8 +94,8 @@ public class Name {
 
             // make sure it's element node.
             if (tempNode.getNodeType() == Node.TEXT_NODE) {
-                stringBuilder.append(tempNode.getTextContent().trim());
-                stringBuilder.append(" ");
+                stringBuilder.append(tempNode.getNodeValue());
+              //  stringBuilder.append(" ");
             }
 
             if (tempNode.getNodeType() == Node.ELEMENT_NODE) {
@@ -103,7 +103,7 @@ public class Name {
                 Element eElement = (Element) tempNode;
                 if (eElement.getTagName() == "ABBR") {
                     stringBuilder.append(HashMapParser.getAbbrMap().get(eElement.getAttribute("REFID")));
-                    stringBuilder.append(" ");
+                    //stringBuilder.append(" ");
                 }
 
                 if (tempNode.hasChildNodes() && eElement.getTagName()!="ABBR") {
