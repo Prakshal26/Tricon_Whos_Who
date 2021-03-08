@@ -46,10 +46,7 @@ public class DomParserDemo {
                         postgreSQLJDBC.insertCrossRefEntry(connection,crossRefEntry);
                     } else {
                         inserted_id = postgreSQLJDBC.insertPeople(connection, person1);
-                        if (inserted_id != 0) {
-                            postgreSQLJDBC.insertProfession(connection, person1.getProfession(),inserted_id);
-                        }
-                        else {
+                        if (inserted_id == 0) {
                             System.out.println("Issue with Insertion");
                         }
                     }

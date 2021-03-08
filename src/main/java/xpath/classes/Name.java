@@ -24,7 +24,7 @@ public class Name {
                 if (subElement.getTagName().equalsIgnoreCase("INDEXEDNAME")) {
                     StringBuilder indexedNameBuilder = new StringBuilder();
                     printNote(subElement.getChildNodes(),indexedNameBuilder);
-                    person.setIndexedname(indexedNameBuilder.toString());
+                    person.setIndexedName(indexedNameBuilder.toString());
                 }
                 if (subElement.getTagName().equalsIgnoreCase("NOBILITY")) {
                     StringBuilder nobilityBuilder = new StringBuilder();
@@ -36,12 +36,12 @@ public class Name {
                     StringBuilder titleBuilder = new StringBuilder();
                     //titleBuilder.append(", ");
                     printNote(subElement.getChildNodes(), titleBuilder);
-                    person.setTitle(titleBuilder.toString());
+                    person.setTitles(titleBuilder.toString());
                 }
                 if (subElement.getTagName().equalsIgnoreCase("GIVENNAME")) {
                     StringBuilder givenNameBuilder = new StringBuilder();
                     printNote(subElement.getChildNodes(), givenNameBuilder);
-                    person.setGivenname(givenNameBuilder.toString());
+                    person.setGivenName(givenNameBuilder.toString());
                 }
                 if (subElement.getTagName().equalsIgnoreCase("PSEUDONYM")) {
                     StringBuilder pseudonymBuilder = new StringBuilder();

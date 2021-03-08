@@ -13,17 +13,17 @@ public class CrossRefEntryParser {
 
         StringBuilder referredNameBuilder = new StringBuilder();
 
-        if (person.getGivenname() != null) {
-            crossRefEntry.setGivenName(person.getGivenname());
+        if (person.getGivenName() != null) {
+            crossRefEntry.setGivenName(person.getGivenName());
         }
-        if (person.getIndexedname() != null) {
-            crossRefEntry.setIndexedName(person.getIndexedname());
+        if (person.getIndexedName() != null) {
+            crossRefEntry.setIndexedName(person.getIndexedName());
         }
         if (person.getNobility() != null) {
             crossRefEntry.setNobility(person.getNobility());
         }
-        if (person.getTitle() != null) {
-            crossRefEntry.setTitle(person.getTitle());
+        if (person.getTitles() != null) {
+            crossRefEntry.setTitle(person.getTitles());
         }
         if (person.getPseudonym() != null) {
             crossRefEntry.setPseudonym(person.getPseudonym());

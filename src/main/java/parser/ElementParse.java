@@ -24,7 +24,7 @@ public class ElementParse {
                 break;
 
             case XPathConstants.PORTRAIT_IMAGE:
-                person.setPortrait_image(Portrait.convert(element));
+                person.setPortraitImage(Portrait.convert(element));
                 break;
 
             case XPathConstants.QUALIFICATIONS:
@@ -43,7 +43,7 @@ public class ElementParse {
                 person.setDateOfBirth(HandleAbbr.convert(element));
                 break;
             case XPathConstants.PLACEOFBIRTH:
-                person.setPlaceOfbirth(HandleAbbr.convert(element));
+                person.setPlaceOfBirth(HandleAbbr.convert(element));
                 break;
             case XPathConstants.DATEOFDEATH:
                 person.setDateOfDeath(HandleAbbr.convert(element));
@@ -60,10 +60,10 @@ public class ElementParse {
                 person.setEducation(HandleAbbr.convert(element));
                 break;
             case XPathConstants.CAREERPARA:
-                person.setCareer(HandleAbbr.convert(element));
+                person.setCareerPara(HandleAbbr.convert(element));
                 break;
             case XPathConstants.HONOURSAWARDS:
-                person.setHonourAndAwards(HandleAbbr.convert(element));
+                person.setHonoursAwards(HandleAbbr.convert(element));
                 break;
 
 
@@ -100,16 +100,16 @@ public class ElementParse {
                 person.setPublications(Films.convert(element));
                 break;
             case XPathConstants.LEISUREINTERESTS:
-                person.setLeisure_interests(Films.convert(element));
+                person.setLeisureInterests(Films.convert(element));
                 break;
 
             case XPathConstants.CONTACTDETAILS:
                 List <String> stringList = ContactDetails.convert(element);
                 if (stringList.get(0).equalsIgnoreCase("PUBLIC")) {
-                    person.setContact_details(stringList.get(1));
+                    person.setContactDetails(stringList.get(1));
                 }
                 if (stringList.get(0).equalsIgnoreCase("MANAGEMENT")) {
-                    person.setManagement(stringList.get(1));
+                    person.setManagementAddress(stringList.get(1));
                 }
                 break;
             case XPathConstants.CROSSREFENTRY:
@@ -145,7 +145,7 @@ public class ElementParse {
         if (entryElement.hasAttribute("ID")) {
             String id = entryElement.getAttribute("ID").toLowerCase();
             crossRefEntry.setId(id);
-            person.setId(id);
+            person.setXmlId(id);
         }
         if (entryElement.hasAttribute("REGION")) {
             person.setRegion(entryElement.getAttribute("REGION"));

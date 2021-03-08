@@ -9,30 +9,30 @@ import java.util.List;
 public class Person {
 
 
-    private String id;
+    private String xmlId;
 
-    private String indexedname;
-    private String givenname;
-    private String title;
+    private String indexedName;
     private String nobility;
+    private String titles;
+    private String givenName;
     private String pseudonym;
 
-    private String portrait_image;
-
+    private String portraitImage;
     private String qualifications;
     private String nationality;
+
+    private List<String> profession = new LinkedList<>();
+
     private String presentPosition;
     private String nameAtBirth;
     private String dateOfBirth;
-    private String placeOfbirth;
+    private String placeOfBirth;
     private String dateOfDeath;
     private String parentage;
-    private String education;
-    private String career;
-    private String honourAndAwards;
-
     private String family;
-    private List<String> profession = new LinkedList<>();
+    private String education;
+    private String careerPara;
+    private String honoursAwards;
 
     private String films;
     private String plays;
@@ -43,46 +43,47 @@ public class Person {
     private String radio;
     private String achievements;
     private String publications;
-    private String leisure_interests;
-    private String contact_details;
-    private String management;
+    private String leisureInterests;
+    private String contactDetails;
+    private String managementAddress;
 
-    private String region;
-    private String subRegion;
 
     private int dead;
     private String gender;
+    private String region;
+    private String subRegion;
 
-    public String getId() {
-        return id;
+
+    public String getXmlId() {
+        return xmlId;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public void setXmlId(String xmlId) {
+        this.xmlId = xmlId;
     }
 
-    public String getIndexedname() {
-        return indexedname;
+    public String getIndexedName() {
+        return indexedName;
     }
 
-    public void setIndexedname(String indexedname) {
-        this.indexedname = indexedname;
+    public void setIndexedName(String indexedName) {
+        this.indexedName = indexedName;
     }
 
-    public String getGivenname() {
-        return givenname;
+    public String getGivenName() {
+        return givenName;
     }
 
-    public void setGivenname(String givenname) {
-        this.givenname = givenname;
+    public void setGivenName(String givenName) {
+        this.givenName = givenName;
     }
 
-    public String getTitle() {
-        return title;
+    public String getTitles() {
+        return titles;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+    public void setTitles(String titles) {
+        this.titles = titles;
     }
 
     public String getNobility() {
@@ -101,12 +102,12 @@ public class Person {
         this.pseudonym = pseudonym;
     }
 
-    public String getPortrait_image() {
-        return portrait_image;
+    public String getPortraitImage() {
+        return portraitImage;
     }
 
-    public void setPortrait_image(String portrait_image) {
-        this.portrait_image = portrait_image;
+    public void setPortraitImage(String portraitImage) {
+        this.portraitImage = portraitImage;
     }
 
     public String getQualifications() {
@@ -149,12 +150,12 @@ public class Person {
         this.dateOfBirth = dateOfBirth;
     }
 
-    public String getPlaceOfbirth() {
-        return placeOfbirth;
+    public String getPlaceOfBirth() {
+        return placeOfBirth;
     }
 
-    public void setPlaceOfbirth(String placeOfbirth) {
-        this.placeOfbirth = placeOfbirth;
+    public void setPlaceOfBirth(String placeOfBirth) {
+        this.placeOfBirth = placeOfBirth;
     }
 
     public String getDateOfDeath() {
@@ -203,20 +204,20 @@ public class Person {
         this.education = education;
     }
 
-    public String getCareer() {
-        return career;
+    public String getCareerPara() {
+        return careerPara;
     }
 
-    public void setCareer(String career) {
-        this.career = career;
+    public void setCareerPara(String careerPara) {
+        this.careerPara = careerPara;
     }
 
-    public String getHonourAndAwards() {
-        return honourAndAwards;
+    public String getHonoursAwards() {
+        return honoursAwards;
     }
 
-    public void setHonourAndAwards(String honourAndAwards) {
-        this.honourAndAwards = honourAndAwards;
+    public void setHonoursAwards(String honoursAwards) {
+        this.honoursAwards = honoursAwards;
     }
 
     public String getFilms() {
@@ -327,40 +328,38 @@ public class Person {
         }
     }
 
-    public String getLeisure_interests() {
-        return leisure_interests;
+    public String getLeisureInterests() {
+        return leisureInterests;
     }
 
-    public void setLeisure_interests(String leisure_interests) {
-        if (this.leisure_interests == null) {
-            this.leisure_interests = leisure_interests;
+    public void setLeisureInterests(String leisureInterests) {
+        if (this.leisureInterests == null) {
+            this.leisureInterests = leisureInterests;
         } else  {
-            this.leisure_interests = this.leisure_interests + " " + leisure_interests;
+            this.leisureInterests = this.leisureInterests + " " + leisureInterests;
         }
     }
 
-    public String getContact_details() {
-        return contact_details;
+    public String getContactDetails() {
+        return contactDetails;
     }
 
-    public void setContact_details(String contact_details) {
-        if(this.contact_details == null) {
-            this.contact_details = contact_details;
+    public void setContactDetails(String contactDetails) {
+        if(this.contactDetails == null) {
+            this.contactDetails = contactDetails;
         } else {
-            this.contact_details = this.contact_details + " " + contact_details;
+            this.contactDetails = this.contactDetails + " " + contactDetails;
         }
 
     }
 
-    public String getManagement() {
-        return management;
+    public String getManagementAddress() {
+        return managementAddress;
     }
 
-    public void setManagement(String management) {
-        this.management = management;
+    public void setManagementAddress(String managementAddress) {
+        this.managementAddress = managementAddress;
     }
-
-
 
 
     public int getDead() {
