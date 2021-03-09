@@ -23,7 +23,7 @@ public class CrossRefEntryParser {
             crossRefEntry.setNobility(person.getNobility());
         }
         if (person.getTitles() != null) {
-            crossRefEntry.setTitle(person.getTitles());
+            crossRefEntry.setTitles(person.getTitles());
         }
         if (person.getPseudonym() != null) {
             crossRefEntry.setPseudonym(person.getPseudonym());
@@ -33,11 +33,11 @@ public class CrossRefEntryParser {
         referredNameBuilder.append((element.getAttribute("SLTARGETID").toLowerCase()) + "\">");
         printNote(element.getChildNodes(),referredNameBuilder);
         referredNameBuilder.append("</a> ");
-        crossRefEntry.setReferred_name(referredNameBuilder.toString());
+        crossRefEntry.setReferredName(referredNameBuilder.toString());
 
         if (element.hasAttribute("SLTARGETID")) {
             String starId = element.getAttribute("SLTARGETID");
-            crossRefEntry.setReferred_id(starId.toLowerCase());
+            crossRefEntry.setReferredId(starId.toLowerCase());
         }
     }
 

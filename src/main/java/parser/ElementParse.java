@@ -144,7 +144,7 @@ public class ElementParse {
 
         if (entryElement.hasAttribute("ID")) {
             String id = entryElement.getAttribute("ID").toLowerCase();
-            crossRefEntry.setId(id);
+            crossRefEntry.setXmlId(id);
             person.setXmlId(id);
         }
         if (entryElement.hasAttribute("REGION")) {

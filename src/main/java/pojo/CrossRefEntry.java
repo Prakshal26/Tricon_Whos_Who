@@ -2,14 +2,16 @@ package pojo;
 
 public class CrossRefEntry {
 
+    private String xmlId;
+
     private String indexedName;
-    private String givenName;
     private String nobility;
-    private String title;
+    private String titles;
+    private String givenName;
     private String pseudonym;
-    private String id;
-    private String referred_id;
-    private String referred_name;
+    private String referredId;
+    private String referredName;
+
 
 
     public String getIndexedName() {
@@ -36,12 +38,12 @@ public class CrossRefEntry {
         this.nobility = nobility;
     }
 
-    public String getTitle() {
-        return title;
+    public String getTitles() {
+        return titles;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+    public void setTitles(String titles) {
+        this.titles = titles;
     }
 
     public String getPseudonym() {
@@ -52,27 +54,27 @@ public class CrossRefEntry {
         this.pseudonym = pseudonym;
     }
 
-    public String getId() {
-        return id;
+    public String getXmlId() {
+        return xmlId;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public void setXmlId(String xmlId) {
+        this.xmlId = xmlId;
     }
 
-    public String getReferred_id() {
-        return referred_id;
+    public String getReferredId() {
+        return referredId;
     }
 
-    public void setReferred_id(String referred_id) {
-        this.referred_id = referred_id;
+    public void setReferredId(String referredId) {
+        this.referredId = referredId;
     }
 
-    public String getReferred_name() {
-        return referred_name;
+    public String getReferredName() {
+        return referredName;
     }
 
-    public void setReferred_name(String referred_name) {
-        this.referred_name = referred_name;
+    public void setReferredName(String referredName) {
+        this.referredName = referredName;
     }
 }

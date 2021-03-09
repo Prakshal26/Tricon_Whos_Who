@@ -5,7 +5,6 @@ import pojo.CrossRefEntry;
 import pojo.Person;
 
 import java.sql.*;
-import java.util.List;
 
 public class PostgreSQLJDBC {
 
@@ -33,11 +32,11 @@ public class PostgreSQLJDBC {
         try {
 
 
-            PreparedStatement statement = connection.prepareStatement("INSERT into ww_people(xmlId,indexedName,nobility," +
-                    "titles,givenName,pseudonym,portraitImage,qualifications,nationality,profession,presentPosition,nameAtBirth,dateOfBirth,placeOfBirth," +
-                    "dateOfDeath,parentage,family,education,careerPara,honoursAwards," +
-                    "films,plays,tv,music,dance,artExhibition,radio,achievements,publications,leisureInterests," +
-                    "contactDetails,managementAddress,dead,gender,region,subRegion)" + "VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",Statement.RETURN_GENERATED_KEYS);
+            PreparedStatement statement = connection.prepareStatement("INSERT into ww_people(xml_id,indexed_name,nobility," +
+                    "titles,given_name,pseudonym,portrait_image,qualifications,nationality,profession,present_position,name_at_birth,date_of_birth,place_of_birth," +
+                    "date_of_death,parentage,family,education,career_para,honours_awards," +
+                    "films,plays,tv,music,dance,art_exhibition,radio,achievements,publications,leisure_interests," +
+                    "contact_details,management_address,dead,gender,region,subRegion)" + "VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",Statement.RETURN_GENERATED_KEYS);
 
             int i = 1;
             statement.setString(i++, person.getXmlId());
@@ -103,18 +102,18 @@ public class PostgreSQLJDBC {
 
 
         try {
-            PreparedStatement statement = connection.prepareStatement("INSERT into ww_crossrefentry(id, " +
-                    "indexedname, givenname, nobility, title, pseudonym, referred_id,referred_name)" + "VALUES (?,?,?,?,?,?,?,?)");
+            PreparedStatement statement = connection.prepareStatement("INSERT into ww_crossrefentry(xml_id, " +
+                    "indexed_name, given_name, nobility, titles, pseudonym, referred_id,referred_name)" + "VALUES (?,?,?,?,?,?,?,?)");
 
             int i =1;
-            statement.setString(i++, crossRefEntry.getId());
+            statement.setString(i++, crossRefEntry.getXmlId());
             statement.setString(i++, crossRefEntry.getIndexedName());
             statement.setString(i++, crossRefEntry.getGivenName());
             statement.setString(i++, crossRefEntry.getNobility());
-            statement.setString(i++, crossRefEntry.getTitle());
+            statement.setString(i++, crossRefEntry.getTitles());
             statement.setString(i++, crossRefEntry.getPseudonym());
-            statement.setString(i++, crossRefEntry.getReferred_id());
-            statement.setString(i++, crossRefEntry.getReferred_name());
+            statement.setString(i++, crossRefEntry.getReferredId());
+            statement.setString(i++, crossRefEntry.getReferredName());
 
             statement.execute();
             statement.close();
