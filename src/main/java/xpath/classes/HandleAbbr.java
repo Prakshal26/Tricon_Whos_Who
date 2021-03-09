@@ -17,7 +17,7 @@ public class HandleAbbr {
         return stringBuilder.toString();
     }
 
-    private static void printNote(NodeList nodeList, StringBuilder stringBuilder) {
+    public static void printNote(NodeList nodeList, StringBuilder stringBuilder) {
 
         // StringBuilder stringBuilder = new StringBuilder();
 

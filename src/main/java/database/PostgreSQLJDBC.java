@@ -36,7 +36,7 @@ public class PostgreSQLJDBC {
                     "titles,given_name,pseudonym,portrait_image,qualifications,nationality,profession,present_position,name_at_birth,date_of_birth,place_of_birth," +
                     "date_of_death,parentage,family,education,career_para,honours_awards," +
                     "films,plays,tv,music,dance,art_exhibition,radio,achievements,publications,leisure_interests," +
-                    "contact_details,management_address,dead,gender,region,subRegion)" + "VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",Statement.RETURN_GENERATED_KEYS);
+                    "contact_details,management_address,dead,gender,region,sub_region,reference_id,reference_name)" + "VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",Statement.RETURN_GENERATED_KEYS);
 
             int i = 1;
             statement.setString(i++, person.getXmlId());
@@ -50,8 +50,22 @@ public class PostgreSQLJDBC {
             statement.setString(i++, person.getQualifications());
             statement.setString(i++, person.getNationality());
 
-            Array array = connection.createArrayOf("VARCHAR", person.getProfession().toArray());
-            statement.setArray(i++,array);
+            /*
+            Un-Comment this to Convert Profession Into a Array.
+             */
+            //Array array = connection.createArrayOf("VARCHAR", person.getProfession().toArray());
+            //statement.setArray(i++,array);
+
+            /*
+            Storing Profession as a text.
+            If else is added because if the list is empty it was showing black instead of null in DB.
+             */
+            if (person.getProfession().isEmpty()) {
+                statement.setString(i++,null);
+            } else {
+                String joinedProfession = String.join(", ",person.getProfession());
+                statement.setString(i++, joinedProfession);
+            }
 
             statement.setString(i++, person.getPresentPosition());
             statement.setString(i++, person.getNameAtBirth());
@@ -79,6 +93,9 @@ public class PostgreSQLJDBC {
             statement.setString(i++, person.getGender());
             statement.setString(i++, person.getRegion());
             statement.setString(i++, person.getSubRegion());
+
+            statement.setString(i++, person.getReferenceId());
+            statement.setString(i++, person.getReferenceName());
 
             statement.execute();
 

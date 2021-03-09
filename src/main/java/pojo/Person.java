@@ -53,6 +53,9 @@ public class Person {
     private String region;
     private String subRegion;
 
+    private String referenceId;
+    private String referenceName;
+
 
     public String getXmlId() {
         return xmlId;
@@ -392,5 +395,21 @@ public class Person {
 
     public void setSubRegion(String subRegion) {
         this.subRegion = subRegion;
+    }
+
+    public String getReferenceId() {
+        return referenceId;
+    }
+
+    public void setReferenceId(String referenceId) {
+        this.referenceId = referenceId;
+    }
+
+    public String getReferenceName() {
+        return referenceName;
+    }
+
+    public void setReferenceName(String referenceName) {
+        this.referenceName = referenceName;
     }
 }

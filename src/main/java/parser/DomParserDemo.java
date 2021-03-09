@@ -1,7 +1,7 @@
 package parser;
 //CTRL+ALT+L to format code
 
-import com.fasterxml.jackson.databind.ObjectMapper;
+
 
 import database.PostgreSQLJDBC;
 import org.w3c.dom.Document;
@@ -33,22 +33,14 @@ public class DomParserDemo {
             int file_count =1;
             for(File file : files) {
                 if(file.isFile() && file.getName().endsWith(".xml")) {
+                    System.out.println("File "+ file_count++ + file.getName());
+
                     Document doc = dBuilder.parse(file);
+                    Person person = ElementParse.parseFiles(doc);
 
-                    List<Object> objectList = ElementParse.parseFiles(doc);
-
-                    Person person1 = (Person) objectList.get(0);
-                    CrossRefEntry crossRefEntry = (CrossRefEntry) objectList.get(1);
-
-                    System.out.println("File "+ file_count++);
-
-                    if (crossRefEntry.getIndexedName() != null) {
-                        postgreSQLJDBC.insertCrossRefEntry(connection,crossRefEntry);
-                    } else {
-                        inserted_id = postgreSQLJDBC.insertPeople(connection, person1);
-                        if (inserted_id == 0) {
-                            System.out.println("Issue with Insertion");
-                        }
+                    inserted_id = postgreSQLJDBC.insertPeople(connection, person);
+                    if (inserted_id == 0) {
+                        System.out.println("Issue with Insertion");
                     }
                 }
             }

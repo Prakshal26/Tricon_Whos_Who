@@ -14,7 +14,7 @@ import java.util.List;
 
 public class ElementParse {
 
-    public static void match(Element element, Person person, CrossRefEntry crossRefEntry) {
+    public static void match(Element element, Person person) {
 
         String tagName = element.getTagName();
         switch (tagName) {
@@ -113,7 +113,7 @@ public class ElementParse {
                 }
                 break;
             case XPathConstants.CROSSREFENTRY:
-                CrossRefEntryParser.convert(element, crossRefEntry, person);
+               CrossRefEntryParser.convert(element, person);
                 break;
             default:
                 break;
@@ -121,10 +121,9 @@ public class ElementParse {
         }
     }
 
-    public static List<Object> parseFiles(Document doc) {
+    public static Person parseFiles(Document doc) {
 
         Person person = new Person();
-        CrossRefEntry crossRefEntry = new CrossRefEntry();
 
         doc.getDocumentElement().normalize();
         Node entryNode = doc.getDocumentElement();
@@ -144,7 +143,6 @@ public class ElementParse {
 
         if (entryElement.hasAttribute("ID")) {
             String id = entryElement.getAttribute("ID").toLowerCase();
-            crossRefEntry.setXmlId(id);
             person.setXmlId(id);
         }
         if (entryElement.hasAttribute("REGION")) {
@@ -159,12 +157,10 @@ public class ElementParse {
 
             if (nNode.getNodeType() == Node.ELEMENT_NODE) {
                 Element element = (Element)nNode;
-                match(element, person, crossRefEntry);
+                match(element, person);
             }
         }
-        List<Object> objectList = new ArrayList<>();
-        objectList.add(person);
-        objectList.add(crossRefEntry);
-        return objectList;
+
+        return person;
     }
 }
