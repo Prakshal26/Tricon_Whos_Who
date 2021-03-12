@@ -5,7 +5,6 @@ package parser;
 
 import database.PostgreSQLJDBC;
 import org.w3c.dom.Document;
-import pojo.CrossRefEntry;
 import pojo.Person;
 
 import javax.xml.parsers.DocumentBuilder;
@@ -13,7 +12,6 @@ import javax.xml.parsers.DocumentBuilderFactory;
 import java.io.File;
 import java.sql.Connection;
 import java.sql.SQLException;
-import java.util.List;
 
 public class DomParserDemo {
 

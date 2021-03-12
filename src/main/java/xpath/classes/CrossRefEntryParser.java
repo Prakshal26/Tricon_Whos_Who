@@ -1,10 +1,6 @@
 package xpath.classes;
 
 import org.w3c.dom.Element;
-import org.w3c.dom.Node;
-import org.w3c.dom.NodeList;
-import parser.HashMapParser;
-import pojo.CrossRefEntry;
 import pojo.Person;
 
 public class CrossRefEntryParser {

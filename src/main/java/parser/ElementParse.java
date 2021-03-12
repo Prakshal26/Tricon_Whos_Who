@@ -4,12 +4,10 @@ import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
-import pojo.CrossRefEntry;
 import pojo.Person;
 import xpath.classes.*;
 import xpath.constants.XPathConstants;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class ElementParse {
