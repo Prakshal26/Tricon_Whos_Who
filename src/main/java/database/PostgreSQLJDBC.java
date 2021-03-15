@@ -12,7 +12,7 @@ public class PostgreSQLJDBC {
         try {
             Class.forName("org.postgresql.Driver");
             connection = DriverManager
-                    .getConnection("jdbc:postgresql://localhost:5432/ww_data_parsing_profession",
+                    .getConnection("jdbc:postgresql://localhost:5432/ww_data_parsing_specialChar",
                             "postgres", "root");
 
         } catch (Exception e) {
@@ -31,15 +31,16 @@ public class PostgreSQLJDBC {
         try {
 
 
-            PreparedStatement statement = connection.prepareStatement("INSERT into ww_people(xml_id,indexed_name,nobility," +
+            PreparedStatement statement = connection.prepareStatement("INSERT into ww_people(xml_id,indexed_name,plain_indexed_name,nobility," +
                     "titles,given_name,pseudonym,portrait_image,qualifications,nationality,profession,present_position,name_at_birth,date_of_birth,place_of_birth," +
                     "date_of_death,parentage,family,education,career_para,honours_awards," +
                     "films,plays,tv,music,dance,art_exhibition,radio,achievements,publications,leisure_interests," +
-                    "contact_details,management_address,dead,gender,region,sub_region,reference_id,reference_name)" + "VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",Statement.RETURN_GENERATED_KEYS);
+                    "contact_details,management_address,dead,gender,region,sub_region,reference_id,reference_name)" + "VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",Statement.RETURN_GENERATED_KEYS);
 
             int i = 1;
             statement.setString(i++, person.getXmlId());
             statement.setString(i++, person.getIndexedName());
+            statement.setString(i++, person.getPlainIndexedName());
             statement.setString(i++, person.getNobility());
             statement.setString(i++, person.getTitles());
             statement.setString(i++, person.getGivenName());

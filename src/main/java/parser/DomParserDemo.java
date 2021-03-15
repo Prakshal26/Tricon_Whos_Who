@@ -4,14 +4,19 @@ package parser;
 
 
 import database.PostgreSQLJDBC;
+import org.jsoup.Jsoup;
 import org.w3c.dom.Document;
 import pojo.Person;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import java.io.File;
+import java.io.FileWriter;
 import java.sql.Connection;
 import java.sql.SQLException;
+import java.text.Normalizer;
+import java.util.HashMap;
+import java.util.Map;
 
 public class DomParserDemo {
 
@@ -19,6 +24,7 @@ public class DomParserDemo {
 
         PostgreSQLJDBC postgreSQLJDBC = new PostgreSQLJDBC();
         Connection connection = null;
+
         try {
             HashMapParser.abbrConverter();
             connection = postgreSQLJDBC.connect();
@@ -29,13 +35,14 @@ public class DomParserDemo {
             File [] files = dir.listFiles();
             int inserted_id = 0;
             int file_count =1;
+
             for(File file : files) {
                 if(file.isFile() && file.getName().endsWith(".xml")) {
                     System.out.println("File "+ file_count++ + file.getName());
 
                     Document doc = dBuilder.parse(file);
                     Person person = ElementParse.parseFiles(doc);
-
+                    
                     inserted_id = postgreSQLJDBC.insertPeople(connection, person);
                     if (inserted_id == 0) {
                         System.out.println("Issue with Insertion");

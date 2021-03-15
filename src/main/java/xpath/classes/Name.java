@@ -1,15 +1,27 @@
 package xpath.classes;//package xpath.classes;
 
+import org.jsoup.Jsoup;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import parser.HashMapParser;
 import pojo.Person;
 
+import java.text.Normalizer;
 import java.util.LinkedList;
 import java.util.List;
 
 public class Name {
+
+
+    static String convertHtmlEntitiesToPlainEnglish(String indexNameInHtmlEntities) {
+
+        String indexNameInLatinCharacter = Jsoup.parse(indexNameInHtmlEntities).text();
+        String indexNameInNormalEnglish = Normalizer.normalize(indexNameInLatinCharacter, Normalizer.Form.NFD)
+                .replaceAll("[^\\p{ASCII}]", "");
+
+        return indexNameInNormalEnglish;
+    }
 
     public static void convert(Element element, Person person) {
 
@@ -25,6 +37,8 @@ public class Name {
                     StringBuilder indexedNameBuilder = new StringBuilder();
                     printNote(subElement.getChildNodes(),indexedNameBuilder);
                     person.setIndexedName(indexedNameBuilder.toString());
+
+                    person.setPlainIndexedName(convertHtmlEntitiesToPlainEnglish(indexedNameBuilder.toString()));
                 }
                 if (subElement.getTagName().equalsIgnoreCase("NOBILITY")) {
                     StringBuilder nobilityBuilder = new StringBuilder();
